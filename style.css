@@ -1,4 +1,49 @@
-#map
-{
-    height : 100vh;
+*{
+  margin:0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#map{
+    height: 100vh;  
+}
+
+#logo{
+  width: 20%;
+  height: 10vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
+.menu{
+
+    width: 20%;
+    height: 30vh;
+    background: rgba(85,85,85,0.3);
+    backdrop-filter : blur(50px); 
+    position: absolute;
+    left: 0;
+    top: 20;
+}
+
+.flight-data{
+
+  width: 20%;
+  height: 60vh;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background: rgba(200, 200, 200, 0.3);
+  backdrop-filter : blur(50px); 
+
+}
+
+.map-container{
+
+  width: 80%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
