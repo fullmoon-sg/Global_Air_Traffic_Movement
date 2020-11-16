@@ -27,13 +27,13 @@ async function addFlightMarkers(map)
 {
 let flight = await getFlightData();
 
-  for (i = 0; i < 10; i++){
-         L.marker([flight[i][6],flight[i][5]],{icon:myIcon}).addTo(map);
-         L.marker([flight[i][6],flight[i][5]],{icon:myIcon}).addTo(map);
-         L.marker([flight[i][6],flight[i][5]],{icon:myIcon}).addTo(map);
-         L.marker([flight[i][6],flight[i][5]],{icon:myIcon}).addTo(map);
+  for (i = 100; i < 110; i++){
          L.marker([flight[i][6],flight[i][5]],{icon:myIcon}).addTo(map);
          console.log(flight[i][6],flight[i][5]);
+
+        let callsign = document.querySelector("#callsign");
+       //callsign.value = ((flight[0][13] * 3.3).toFixed(0) + " FT");
+       callsign.value = (flight[i][6],flight[i][5]);    
   }
 }
 

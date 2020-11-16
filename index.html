@@ -15,17 +15,67 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
   <div class="logo">
-    <img src="images/logo.png">;
+   <img src="images/logo.png">
   </div> 
-  <div class="menu"></div>
-   <div class="flight-data"></div>
-   <div class="map-container">
-  <div id="map"></div>
+  <div class="menu">
+    <!-- <image src="images/login.jpg" width ="480" height="250"> -->
   </div>
+   <div class="flight-data">
+       <div class="header">
+        <h2>Flight Data</h2>  
+     <form class="form"> 
+          <div class="form-control">
+             <label for="f-date">Flight Date</label>
+             <input type = "text" size = "8" name="name" id="f-date">
+          </div>
+          <div class="form-control">
+               <label for="f-status">Flight Status</label>
+               <input type = "text" size = "6" name="name" id="f-status">
+          </div>
+          <div class="form-control">
+                <label for="f-number">Flight Number</label>
+                <input type = "text" size = "8" name="name" id="f-number">
+          </div>
+          <div class="form-control">
+            <label for="f-De-airport">Departure Airport</label>
+            <input type = "text" size = "15" name="name" id="f-De-airport">
+          </div>
+          <div class="form-control">
+              <label for="f-De-time">Est. Departure Time</label>
+              <input type = "text" size = "8" name="name" id="f-De-time">
+          </div>
+          <div class="form-control">
+             <label for="f-Arr-airport">Arrival Airport</label>
+             <input type = "text" size = "15" name="name" id="f-De-airport">
+          </div>
+          <div class="form-control">
+                <label for="f-Arr-time">Est. Arrival Time</label>
+                <input type = "text" size = "8" name="name" id="f-Arr-time">
+          </div>
+          <div class="form-control">
+              <label for="f-Alt">Current Altitude</label>
+              <input type = "text" size = "8" name="name" id="f-Alt">
+          </div>
+          <div class="form-control">
+                <label for="f-speed">Current Speed</label>
+                <input type = "text" size = "6" name="name" id="f-speed">
+          </div>
+        <div class="form-control">
+          <label for="f-Dir">Current Direction</label>
+          <input type = "text" size = "8" name="name" id="f-Dir">
+        </div>
+        </div>    
+       </form>
+    </div>
+  </div>
+  
+  <div id="map"></div>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"
@@ -36,6 +86,7 @@
 		integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
 		crossorigin=""></script>
         <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
 	<script src="script.js"></script>
 </body>
 </html>
