@@ -1,5 +1,4 @@
 
-//set deafault map as centre
 let map = L.map('map').setView([0,0], 3);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -27,15 +26,23 @@ async function addFlightMarkers(map)
 {
 let flight = await getFlightData();
 
-  for (i = 100; i < 110; i++){
+  for (i = 0; i < 20; i++){
          L.marker([flight[i][6],flight[i][5]],{icon:myIcon}).addTo(map);
          console.log(flight[i][6],flight[i][5]);
 
         let callsign = document.querySelector("#callsign");
        //callsign.value = ((flight[0][13] * 3.3).toFixed(0) + " FT");
-       callsign.value = (flight[i][6],flight[i][5]);    
+       if (flight[i][6],flight[i][5] == null)
+       {
+         callsign.value = "no information available"
+       }
+       else
+       {
+       callsign.value = (flight[0][6]);    
+       }
   }
 }
 
 
 addFlightMarkers(map);
+
