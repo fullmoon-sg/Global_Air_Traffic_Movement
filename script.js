@@ -25,12 +25,12 @@ iconAnchor : [25,16]
 async function addFlightMarkers(map)
 {
 let flight = await getFlightData();
-
-  for (i = 0; i < 20; i++){
+//restricted to 10 aircraft to avoid overall the network during development phase
+  for (i = 0; i < 10; i++){
          L.marker([flight[i][6],flight[i][5]],{icon:myIcon}).addTo(map);
          console.log(flight[i][6],flight[i][5]);
 
-        let callsign = document.querySelector("#callsign");
+        let callsign = document.querySelector("#f-Alt");
        //callsign.value = ((flight[0][13] * 3.3).toFixed(0) + " FT");
        if (flight[i][6],flight[i][5] == null)
        {
@@ -38,7 +38,7 @@ let flight = await getFlightData();
        }
        else
        {
-       callsign.value = (flight[0][6]);    
+       callsign.value = ((flight[0][13] * 3.3).toFixed(0) + " Ft");    //convert metres to feet for height
        }
   }
 }

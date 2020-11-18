@@ -1,63 +1,28 @@
-{
+*{
   margin:0;
-  padding: 0;
   font-family: 'Roboto Slab',sans-serif;
 }
 
-#logo{
-  width: 20%;
-  height: 10vh;
-  position: absolute;
-  left: 0;
-  top: 0;
+.navbar{
+  padding:0;
 }
 
-.menu{
-   background-image: url("images/login.jpg");
-   background-size: cover;
-   width:20%;
-   height: 26vh;
-   background-position: center;
-   position: absolute;
+.container-fluid{
+  padding:1px;
 }
-
-.flight-data{
-  left:0;
-  width: 20%;
-  height: 65vh;
-  bottom: 0;
-  position: absolute;
-  background: rgba(200, 200, 200, 0.5);
-  backdrop-filter : blur(70px); 
-}
-
-input{
-  width: 50%;
-  outline: none;
-  border: 2px solid #fff;
-  border-radius: 4px;
-  background: #f2f2f2;
-  color: #fff;
-  font-size: 12px;
-}
-
-.form-control{
-  display: inline-block;
-  border: 2px solid rgba(200, 200, 200);
-  border-radius : 2px;
-  font-size : 10px;
-  line-height: 1;
-  padding:  5px;
+.row{
   width: 100%;
 }
-
-#map{
-
-  width: 80%;
-  height: 100vh;
-  position: absolute;
-  right: 0;
-  top: 0;
+#map
+{
+  width: 100%;
+  background-color : cyan;
+  height: 73vh;
 }
 
-
+#flight-data
+{
+  background-color: silver;
+  height: 15vh;
+  
+}
