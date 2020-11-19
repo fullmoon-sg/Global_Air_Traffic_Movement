@@ -4,25 +4,63 @@
 }
 
 .navbar{
-  padding:0;
+  padding:0px;
+  background-color : #171717 !important;
+}
+
+li.nav-item a{
+  color: #28a745!important;
 }
 
 .container-fluid{
   padding:1px;
 }
+
 .row{
   width: 100%;
+  justify-content : space-evenly;
+  
 }
+
+
 #map
 {
   width: 100%;
   background-color : cyan;
-  height: 73vh;
+  height: 75vh;
 }
 
 #flight-data
 {
-  background-color: silver;
-  height: 15vh;
+ background-color : #171717;
+ color : white;
+  height: 15.5vh;
   
+}
+
+label{
+
+  width : 120px;
+  height: 25px;
+  font-size : 13px;
+  text-align : center;
+  margin-bottom : 5px;
+ 
+}
+.form-control
+{
+  
+  width: 8vw;
+  height: 8vh;
+  padding: 5px;
+}
+
+#display{
+
+  background-image : url("images/display.jpg");
+  background-repeat : no-repeat;
+  position: center;
+
+  width: 1300px;
+  height:60px;
 }
