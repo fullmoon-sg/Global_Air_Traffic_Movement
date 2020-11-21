@@ -22,7 +22,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Login<span class="sr-only">(current)</span></a>
+        <a id="login" class="nav-link" href="#">Login<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Airport</a>
@@ -48,7 +48,34 @@
   </div>
 </nav>
 <div class="container-fluid">
-<div id="map">Map area</div>
+<div id="map">
+
+  <div class ="login-form"> 
+    <div class="login-content"> 
+          <div class = "header">
+            <h2 style="color : White"> First Class Check-In</h2>
+            <div class="close">+</div>
+          </div> 
+      <div class="login">
+          <form>
+            <div class="login-control">
+            <label for="name">Username</label>
+            <input type="text" placeholder="name" id="name">
+            <div class="login-control"></div>
+            <label for="password">Password</label>
+            <input type="text" placeholder= "password" id="password"></div>
+            <button class="btn-submit" id= "submit">Submit</button>
+          </form> 
+      </div>
+          <div class="register">
+                <button class="btn-submit" id="register">Register</button>
+          </div>
+    </div>
+  </div>
+
+
+</div>
+
 <div id="flight-data">
   <div id="header">
     <h2>Flight Data</h2>  
