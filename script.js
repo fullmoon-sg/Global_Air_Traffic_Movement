@@ -64,3 +64,24 @@ document.querySelector(".close").addEventListener('click',function(){
   document.querySelector(".login-form").style.display = "none";
 })
 
+let subMit = document.querySelector("#submit");
+subMit.addEventListener('click', function(){
+
+  let userId = document.querySelector("#name").value;
+  let passWord = document.querySelector("#password").value;
+
+  axios.get("admin/user.json").then(function(response){
+    
+    let validation = response.data;
+
+    for (let d in validation)
+    {
+      console.log(d["member"]["userid"]);
+    }
+    
+    console.log(validation["member"]["userid"]);
+    
+   
+  })
+
+})
