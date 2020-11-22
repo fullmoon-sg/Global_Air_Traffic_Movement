@@ -67,20 +67,23 @@ document.querySelector(".close").addEventListener('click',function(){
 let subMit = document.querySelector("#submit");
 subMit.addEventListener('click', function(){
 
+  let validation;
   let userId = document.querySelector("#name").value;
   let passWord = document.querySelector("#password").value;
 
-  axios.get("admin/user.json").then(function(response){
+  axios.get("admin/users.json").then(function(response){
     
-    let validation = response.data;
+    validation = response.data;
+    console.log(userId);
+    console.log(passWord);
 
-    for (let d in validation)
+    for (let i = 0; i < validation.length; i++)
     {
-      console.log(d["member"]["userid"]);
+      console.log(validation.member[i].userid)
     }
     
-    console.log(validation["member"]["userid"]);
-    
+    // console.log(validation.member.userid);
+   
    
   })
 
