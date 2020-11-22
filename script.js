@@ -16,47 +16,51 @@ async function getFlightData(){
     let response = await axios.get("https://fullmoon_sg:sfh2298g@opensky-network.org/api/states/all");
     return response.data.states
 }
-//change the aircraft icon from original pointer icon. However, it will be implemented in later stage.
-const myIcon = L.icon({
-iconUrl: "images/aircraft.png",
-iconSize : [50,40],
-iconAnchor : [25,16]
-});
 
 async function addFlightMarkers(map)
 {
 let flight = await getFlightData();
+
 //restricted to 10 aircraft to avoid overall the network during development phase
-  for (i = 10; i < 20; i++)
-  {
-        L.marker([flight[i][6],flight[i][5]], {
-        icon : myIcon
-      }).addTo(map);
-    
-      }
-
+ for (i = 0; i < 10; i++)
+ {
+       L.marker([flight[i][6],flight[i][5]], {
+         icon : myIcon = L.icon({
+          iconUrl: "images/aircraft.png",
+          iconSize : [50,40],
+          iconAnchor : [25,16]
+          })}).addTo(map).bindPopup(flight[i][1]);  
+        
+      //  console.log([flight[i][6],flight[i][5]]);
       
-        let fNumber = document.querySelector("#f-number");
-        let fAlt = document.querySelector("#f-Alt");
-        let fSpeed = document.querySelector("#f-speed");
-       
-      fNumber.value = flight[1][1]; //assign flight number
-      fAlt.value = ((flight[1][13] * 3.3).toFixed(0) + " Ft");    //convert metres to feet for height
-      fSpeed.value = (((flight[1][9])*3600/1000).toFixed(0) + " km/h"); //convert speed to km/h
+ }
+  
+   //  console.log(flight.length);
+   let fNumber = document.querySelector("#f-number");
+   let fAlt = document.querySelector("#f-Alt");
+   let fSpeed = document.querySelector("#f-speed");
 
-      
+   function onMapClick(e) {
+    console.log("Activited")
+   fNumber.value = flight[1][1]; //assign flight number
+   fAlt.value = ((flight[1][13] * 3.3).toFixed(0) + " Ft");    //convert metres to feet for height
+   fSpeed.value = (((flight[i][9])*3600/1000).toFixed(0) + " km/h"); //convert speed to km/h
+   console.log("Still Aviation")
+  }  
+
+   map.on('click', onMapClick);
    
-   console.log(flight[10][10]);
+    // console.log(flight[10][10]);
 }
-
 addFlightMarkers(map);
 
 //---------------- Login query-------------
 
 document.querySelector("#login").addEventListener('click', function(){
-  document.querySelector(".login-form").style.display = "flex";
+document.querySelector(".login-form").style.display = "flex";
 })
 
 document.querySelector(".close").addEventListener('click',function(){
   document.querySelector(".login-form").style.display = "none";
 })
+
