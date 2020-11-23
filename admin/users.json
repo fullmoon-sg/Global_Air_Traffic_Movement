@@ -1,10 +1,10 @@
 { 
-  "member": {
-    "userid": "John",
+  "index1": {
+    "userid": "test1",
     "password": "1234"
-  },
-  "member1": {
-    "userid": "fullmoon",
+},
+  "index2": {
+    "userid": "test2",
     "password": "5678"
   }
 }

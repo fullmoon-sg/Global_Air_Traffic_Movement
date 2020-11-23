@@ -30,11 +30,12 @@ next.addEventListener('click', function(){
   airportName.innerHTML = airportTitle[i+1];
   changeText.innerHTML = textLinkToImage[i+1];
   i++;
+
   }
 })
 
 prev.addEventListener('click', function(){
-  if(i > 0)
+  if (i > 0)
   {
   airport.style.backgroundImage = 'url("' + backgroundImage[i-1] +'")';
   airportName.innerHTML = airportTitle[i-1];
@@ -42,5 +43,3 @@ prev.addEventListener('click', function(){
   i--;
   }
 })
-
-
