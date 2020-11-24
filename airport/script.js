@@ -23,23 +23,39 @@ let i = 0;
 airportName.innerHTML = airportTitle[i]
 changeText.innerHTML = textLinkToImage[i]
 
-next.addEventListener('click', function(){
-  if(i < 3)
-  {
-  airport.style.backgroundImage = 'url("' + backgroundImage[i+1] +'")';
-  airportName.innerHTML = airportTitle[i+1];
-  changeText.innerHTML = textLinkToImage[i+1];
-  i++;
-
-  }
-})
-
 prev.addEventListener('click', function(){
   if (i > 0)
   {
   airport.style.backgroundImage = 'url("' + backgroundImage[i-1] +'")';
   airportName.innerHTML = airportTitle[i-1];
   changeText.innerHTML = textLinkToImage[i-1];
+  next.style.display = "block";
   i--;
   }
+  if (i===0)
+  {
+    prev.style.display = "none";
+  }
 })
+
+home.addEventListener('click', function(){
+  window.location.assign("../index.html");
+})
+
+next.addEventListener('click', function(){
+  if(i < 3)
+  {
+  airport.style.backgroundImage = 'url("' + backgroundImage[i+1] +'")';
+  airportName.innerHTML = airportTitle[i+1];
+  changeText.innerHTML = textLinkToImage[i+1];
+  prev.style.display = "block";
+  i++;
+  }
+
+  if( i=== 3)
+  {
+    next.style.display = "none";
+  }
+})
+
+
