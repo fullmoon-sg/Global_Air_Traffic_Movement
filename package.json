@@ -1,0 +1,19 @@
+{
+  "name": "global_air_traffic_movement",
+  "version": "1.0.0",
+  "description": "Strategy",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullmoon-sg/Global_Air_Traffic_Movement.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fullmoon-sg/Global_Air_Traffic_Movement/issues"
+  },
+  "homepage": "https://github.com/fullmoon-sg/Global_Air_Traffic_Movement#readme"
+}

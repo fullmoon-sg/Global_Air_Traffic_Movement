@@ -1,10 +1,10 @@
 { 
   "index1": {
-    "userid": "test1",
+    "userid": "Test1",
     "password": "1234"
 },
   "index2": {
-    "userid": "test2",
+    "userid": "Test2",
     "password": "5678"
   }
 }
