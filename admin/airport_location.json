@@ -1,0 +1,43 @@
+[
+  {
+    "airport" : "Changi Internation Airport",
+    "lat" : 1.36,
+    "long": 103.99
+  },
+  {
+    "airport" : "Hong Kong Internation Airport",
+    "lat" : 22.3,
+    "long": 113.91
+  },
+  {
+    "airport" : "Narita Internation Airport",
+    "lat" : 35.77,
+    "long": 104.39
+  },
+  {
+    "airport" : "Kuala Lumpur Internation Airport",
+    "lat" : 2.7347,
+    "long": 101.7
+  }, 
+  {
+    "airport" : "San Francisco Internation Airport",
+    "lat" : 37.6213,
+    "long": -122.379
+  },
+  {
+    "airport" : "Bangkok Internation Airport",
+    "lat" : 13.69,
+    "long": 100.75
+  }, 
+  {
+    "airport" : "Heathrow Internation Airport",
+    "lat" : 51.47,
+    "long": -0.4543
+  },
+  {
+    "airport" : "Charles de Gaulle Internation Airport",
+    "lat" : 49.0139,
+    "long": 2.5425
+  }
+  
+]
