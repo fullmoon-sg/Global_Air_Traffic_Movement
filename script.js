@@ -1,4 +1,3 @@
-
 //Display a map with center position as 0,0
 let map = L.map('map').setView([0,0], 3);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -31,7 +30,11 @@ async function addFlightMarkers(map)
 {
  let flight = await getFlightData();
 //Loading time about 10seconds
- let fNumber = document.querySelector("#f-number");
+        let fDate = document.querySelector("f-date");
+        let fStatus = document.querySelector("f-status");
+        let fNumber = document.querySelector("#f-number");
+        let fDepAirport = document.querySelector("#f-De-airport");
+        let fArrAirport = document.querySelector("#f-Arr-airport");
         let fAlt = document.querySelector("#f-Alt");
         let fSpeed = document.querySelector("#f-speed");
         let fDirection = document.querySelector("#f-dir");
@@ -49,6 +52,7 @@ async function addFlightMarkers(map)
 
       //Click on any icon will display on the icon flight details into the flight label
        marker.addEventListener('click',function(){ 
+        
         fNumber.value = flight[i][1]; //assign flight number
         fAlt.value = ((flight[i][13] * 3.3).toFixed(0) + " Ft");    //convert metres to feet for height
         fSpeed.value = (((flight[i][9])*3600/1000).toFixed(0) + " km/h"); //convert speed to km/h  
@@ -80,12 +84,15 @@ axios.get("admin/users.json").then(function(response)
     if ( ((validation.index1.userid === userId) && (validation.index1.password === passWord)) ||
        ((validation.index2.userid === userId) && (validation.index2.password === passWord)))
       {     
+        
         document.querySelector(".login-form").style.display = "none";
         signIn.innerHTML = "Hello" + " " + userId;
       }
        else
        {
-         document.querySelector("#remarks").innerHTML = "Unable to Check-In. Try again.";
+         document.querySelector("#submit").style.backgroundColor = "red";
+        document.querySelector("#remarks").innerHTML = "Unable to Check-In. Try again.";
        }
 })
 })
+
