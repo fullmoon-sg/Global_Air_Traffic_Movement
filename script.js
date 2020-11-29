@@ -42,7 +42,7 @@ async function addFlightMarkers(map)
 //restricted to 20 aircraft to avoid overall the network during development phase
  for (let i = 0; i < 20; i++)
    {   
-         let marker = L.marker([flight[i][6],flight[i][5]],{
+         let marker = L.marker([flight[i][6],flight[i][5]],{rotationAngle : 180,
          icon : L.icon({
          iconUrl: "images/aircraft.png",
          iconSize : [50,40],
