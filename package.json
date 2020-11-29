@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/fullmoon-sg/Global_Air_Traffic_Movement/issues"
   },
-  "homepage": "https://github.com/fullmoon-sg/Global_Air_Traffic_Movement#readme"
+  "homepage": "https://github.com/fullmoon-sg/Global_Air_Traffic_Movement#readme",
+  "dependencies": {
+    "leaflet-rotatedmarker": "^0.2.0"
+  }
 }

@@ -30,39 +30,68 @@ async function addFlightMarkers(map)
 {
  let flight = await getFlightData();
 //Loading time about 10seconds
-        let fDate = document.querySelector("f-date");
-        let fStatus = document.querySelector("f-status");
+        let fDate = document.querySelector("#f-date");
+        let fStatus = document.querySelector("#f-status");
         let fNumber = document.querySelector("#f-number");
         let fDepAirport = document.querySelector("#f-De-airport");
         let fArrAirport = document.querySelector("#f-Arr-airport");
         let fAlt = document.querySelector("#f-Alt");
         let fSpeed = document.querySelector("#f-speed");
-        let fDirection = document.querySelector("#f-dir");
+        let fDirection = document.querySelector("#f-Dir");  
         
-//restricted to 10 aircraft to avoid overall the network during development phase
- for (let i = 100; i < 110; i++)
+//restricted to 20 aircraft to avoid overall the network during development phase
+ for (let i = 0; i < 20; i++)
    {   
-         let marker = L.marker([flight[i][6],flight[i][5]], {
-         icon : myIcon = L.icon({
+         let marker = L.marker([flight[i][6],flight[i][5]],{
+         icon : L.icon({
          iconUrl: "images/aircraft.png",
          iconSize : [50,40],
          iconAnchor : [25,16],
+         iconAngle : 180,
         })}) 
         marker.addTo(map).bindPopup(flight[i][1]);   
-
+       
       //Click on any icon will display on the icon flight details into the flight label
         marker.addEventListener('click',function(){ 
-    
-        fDepAirport.value = flight[i][2];
+        fDate.value = departureDate(flight[i][3]);
+        fStatus.value = currentTimeOverPosition(flight[i][3])
+        fDepAirport.value = flight[i][2]; //Display departure country
+        fArrAirport.value = "Inform not available"
         fNumber.value = flight[i][1]; //assign flight number
         fAlt.value = ((flight[i][13] * 3.3).toFixed(0) + " Ft");    //convert metres to feet for height
         fSpeed.value = (((flight[i][9])*3600/1000).toFixed(0) + " km/h"); //convert speed to km/h  
+        fDirection.value = (((flight[i][10]).toFixed(0)) + " Degree"); //Display current heading
    })
    }
   }
 
 addFlightMarkers(map);
 
+function currentTimeOverPosition(x){
+  // The unix time stamp is a way to track time as a running total of seconds. This count starts at the Unix Epoch on January 1st, 1970 at UTC. Therefore, the unix time stamp is merely the number of seconds between a particular date and the Unix Epoch.
+  let unix_timestamp = x;
+  // Create a new JavaScript Date object based on the timestamp
+  // multiplied by 1000 so that the argument is in milliseconds, not seconds.
+  var date = new Date(unix_timestamp * 1000);
+  // Hours part from the timestamp
+  var hours = date.getHours();
+  // Minutes part from the timestamp
+  var minutes = "0" + date.getMinutes();
+  // Seconds part from the timestamp
+  var seconds = "0" + date.getSeconds();     
+  // Will display time in 10:30:23 format
+  return formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+}
+
+function departureDate(x){
+  //Similar function to get currentTimeOverPosition
+  var a = new Date(x * 1000);
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var year = a.getFullYear();
+  var month = months[a.getMonth()];
+  var date = a.getDate();
+  return time = date + ' ' + month + ' ' + year ;
+}
 //---------------- Login query-------------
 //Display login menu
 document.querySelector("#login").addEventListener('click', function(){
@@ -70,28 +99,29 @@ document.querySelector(".login-form").style.display = "flex";
 })
 // Click the 'X' to close the login menu
 document.querySelector(".close").addEventListener('click',function(){
-  document.querySelector(".login-form").style.display = "none";
+document.querySelector(".login-form").style.display = "none";
 })
 //Authenticate userid and password.
 let subMit = document.querySelector("#submit");
-subMit.addEventListener('click', function(){
 let validation = {};
+subMit.addEventListener('click', function(){
 let userId = document.querySelector("#name").value;
 let passWord = document.querySelector("#password").value;
 let signIn = document.querySelector("#login")
 axios.get("admin/users.json").then(function(response)
 {
     validation = response.data;
+    
     if ( ((validation.index1.userid === userId) && (validation.index1.password === passWord)) ||
        ((validation.index2.userid === userId) && (validation.index2.password === passWord)))
-      {     
-        
+      {         
         document.querySelector(".login-form").style.display = "none";
         signIn.innerHTML = "Hello" + " " + userId;
       }
        else
        {
-         document.querySelector("#submit").style.backgroundColor = "red";
+        
+        document.querySelector("#submit").style.backgroundColor = "red";
         document.querySelector("#remarks").innerHTML = "Unable to Check-In. Try again.";
        }
 })
