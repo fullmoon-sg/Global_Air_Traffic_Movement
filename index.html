@@ -15,24 +15,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a id="login" class="nav-link" href="#">Check-In<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a id="airport" class="nav-link" href="airport/airport.html">Airport</a>
-      </li>
-      <div id="display"></div>;
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button id = "flight-search" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+<nav class="navbar navbar-light bg-light">
+ <div id="menu">
+   <a id="login"  href="#">Check-In</a>
+  <a id="airport" href="airport/airport.html">Airport</a> 
   </div>
 </nav>
 <div class="container-fluid">
@@ -46,17 +32,17 @@
             </svg></div>
           </div> 
       <div class="login">
-          <form>
+          <form id="form">
             <div class="login-control">
             <label for="name">Username</label>
-            <input type="text" placeholder="name" id="name">
-            <div class="login-control"></div>
+            <input type="text" placeholder="name" id="name"></div>
+            <div class="login-control">
             <label for="password">Password</label>
             <input type="text" placeholder= "password" id="password"></div>
             <button class="btn-submit" id= "submit">Submit</button>
           </form> 
       </div>
-          <div class="register">
+          <div class="message">
             <p id="remarks">WELCOME</p>
           </div>
     </div>
@@ -68,48 +54,41 @@
    <form class="row form"> 
       <div class=" col form-control">
          <label for="f-date">Flight Date</label>
-         <input type = "text" size = "15" name="name" id="f-date">
+         <input type = "text"  name="name" id="f-date">
       </div>
       <div class=" col form-control">
            <label for="f-status">Flight Status</label>
-           <input type = "text" size = "15" name="name" id="f-status">
+           <input type = "text"  name="name" id="f-status">
       </div>
       <div class=" col form-control">
             <label for="f-number">Flight Number</label>
-            <input type = "text" size = "15" name="name" id="f-number">
+            <input type = "text" name="name" id="f-number">
       </div>
       <div class=" col form-control">
         <label for="f-De-airport">Departure Airport</label>
-        <input type = "text" size = "15" name="name" id="f-De-airport">
-      </div>
-      <div class=" col form-control">
-          <label for="f-De-time">Departure Time</label>
-          <input type = "text" size = "15" name="name" id="f-De-time">
+        <input type = "text" name="name" id="f-De-airport">
       </div>
       <div class=" col form-control">
          <label for="f-Arr-airport">Arrival Airport</label>
-         <input type = "text" size = "15" name="name" id="f-De-airport">
-      </div>
-      <div class=" col form-control">
-            <label for="f-Arr-time">Est. Arrival Time</label>
-            <input type = "text" size = "15" name="name" id="f-Arr-time">
+         <input type = "text"  name="name" id="f-Arr-airport">
       </div>
       <div class="col form-control">
           <label for="f-Alt">Current Altitude</label>
-          <input type = "text" size = "15" name="name" id="f-Alt">
+          <input type = "text"  name="name" id="f-Alt">
       </div>
       <div class="col form-control">
             <label for="f-speed">Current Speed</label>
-            <input type = "text" size = "15" name="name" id="f-speed">
+            <input type = "text" name="name" id="f-speed">
       </div>
     <div class=" col form-control">
       <label for="f-Dir">Current Direction</label>
-      <input type = "text" size = "15" name="name" id="f-Dir">
+      <input type = "text" name="name" id="f-Dir">
     </div>    
    </form>
   </div>
 </div> <!-- End of Flight-data div -->
 </div> <!-- End of Container div -->
+
 <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"
       integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ=="

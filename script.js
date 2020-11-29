@@ -42,8 +42,8 @@ async function addFlightMarkers(map)
 //restricted to 10 aircraft to avoid overall the network during development phase
  for (let i = 100; i < 110; i++)
    {   
-      let marker = L.marker([flight[i][6],flight[i][5]], {
-        icon : myIcon = L.icon({
+         let marker = L.marker([flight[i][6],flight[i][5]], {
+         icon : myIcon = L.icon({
          iconUrl: "images/aircraft.png",
          iconSize : [50,40],
          iconAnchor : [25,16],
@@ -51,8 +51,9 @@ async function addFlightMarkers(map)
         marker.addTo(map).bindPopup(flight[i][1]);   
 
       //Click on any icon will display on the icon flight details into the flight label
-       marker.addEventListener('click',function(){ 
-        
+        marker.addEventListener('click',function(){ 
+    
+        fDepAirport.value = flight[i][2];
         fNumber.value = flight[i][1]; //assign flight number
         fAlt.value = ((flight[i][13] * 3.3).toFixed(0) + " Ft");    //convert metres to feet for height
         fSpeed.value = (((flight[i][9])*3600/1000).toFixed(0) + " km/h"); //convert speed to km/h  
