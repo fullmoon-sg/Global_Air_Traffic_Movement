@@ -47,7 +47,6 @@ async function addFlightMarkers(map)
          iconUrl: "images/aircraft.png",
          iconSize : [50,40],
          iconAnchor : [25,16],
-         iconAngle : 180,
         })}) 
         marker.addTo(map).bindPopup(flight[i][1]);   
        
