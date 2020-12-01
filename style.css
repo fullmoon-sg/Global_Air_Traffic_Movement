@@ -139,6 +139,7 @@ div.col.form-control input{
 input { 
   width: 90%;
   padding : 10px;
+  
   border-radius: 4px;
   display: block;
   font-size: 16px; 
@@ -281,7 +282,7 @@ div.login-control{
 
 .login-control label{
   margin:5px;
-  font-size : 16px;
+  font-size : 18px;
   padding: 2px;
 }
 
@@ -299,7 +300,6 @@ input#password{
   width: 90%;
   margin:5px;
   padding : 5px;
-  border: 2px solid;
   border-radius: 4px;
   display: block;
   font-size: 16px; 
@@ -316,15 +316,14 @@ input#password{
   font-size: 14px;  
 } 
 div.message{
-
-  padding:4px;
- 
-font-size: 1.5em;
+padding:4px;
+font-size: 14px;
 }
 
 p#remarks{
   position: absolute;
-  left: 90px;
+  left: 10px;
+  font-size : 14px;
 }
 /* Flight data layout setting */
 div#flight-data
@@ -367,8 +366,8 @@ div.col.form-control{
 div.col.form-control label{
   margin-bottom : 5px;
   height:   20px;
-  width : 110px; 
-  font-size : 12px;
+  width : 140px; 
+  font-size : 13px;
 }
 }
 
@@ -484,7 +483,7 @@ div.col.form-control label{
   
   .login-control label{
     margin:5px;
-    font-size : 24px;
+    font-size : 26px;
     padding: 2px;
   }
   
@@ -495,17 +494,16 @@ div.col.form-control label{
     border: 2px solid;
     border-radius: 4px;
     display: block;
-    font-size: 32px; 
+    font-size: 24px; 
   } 
   
   input#password{
     width: 90%;
     margin:5px;
     padding : 5px;
-    border: 2px solid;
     border-radius: 4px;
     display: block;
-    font-size: 32px; 
+    font-size: 28px; 
   } 
   
   .btn-submit{
@@ -529,7 +527,8 @@ div.col.form-control label{
   
   p#remarks{
     position: absolute;
-    left: 90px;
+    font-size: 16px;
+    left: 60px;
   }
   /* Flight data layout setting */
   div#flight-data
