@@ -93,6 +93,9 @@ function departureDate(x){
 }
 //---------------- Login query-------------
 //Display login menu
+document.querySelector("input#name").style.borderColor = "black";
+document.querySelector("input#password").style.borderColor = "black";
+//Display login menu
 document.querySelector("#login").addEventListener('click', function(){
 document.querySelector(".login-form").style.display = "flex";
 })
@@ -103,26 +106,49 @@ document.querySelector(".login-form").style.display = "none";
 //Authenticate userid and password.
 let subMit = document.querySelector("#submit");
 let validation = {};
+
 subMit.addEventListener('click', function(){
 let userId = document.querySelector("#name").value;
 let passWord = document.querySelector("#password").value;
 let signIn = document.querySelector("#login")
 axios.get("admin/users.json").then(function(response)
-{
-    validation = response.data;
-    
-    if ( ((validation.index1.userid === userId) && (validation.index1.password === passWord)) ||
+{    
+  validation = response.data;
+  
+    if (((validation.index1.userid === userId) && (validation.index1.password === passWord)) ||
        ((validation.index2.userid === userId) && (validation.index2.password === passWord)))
       {         
         document.querySelector(".login-form").style.display = "none";
         signIn.innerHTML = "Hello" + " " + userId;
+      
       }
-       else
-       {
-        
+       else if (((validation.index1.userid === userId) && (validation.index1.password !== passWord)) ||
+       ((validation.index2.userid === userId) && (validation.index2.password !== passWord)))
+       { 
         document.querySelector("#submit").style.backgroundColor = "red";
-        document.querySelector("#remarks").innerHTML = "Unable to Check-In. Try again.";
-       }
-})
-})
+        document.querySelector("input#name").style.borderColor = "green";
+        document.querySelector("input#password").style.borderColor = "red";
+        document.querySelector("#remarks").style.fontSize = "large";
+        document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
+      }
+      else if (((validation.index1.userid !== userId) && (validation.index1.password == passWord)) ||
+      ((validation.index2.userid !== userId) && (validation.index2.password === passWord)))
+      {
+        document.querySelector("#submit").style.backgroundColor = "red";
+        document.querySelector("input#name").style.borderColor = "red";
+        document.querySelector("input#password").style.borderColor = "green";
+        document.querySelector("#remarks").style.fontSize = "large";
+        document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
+      }
+      else
+      {
+        document.querySelector("#submit").style.backgroundColor = "red";
+        document.querySelector("input#name").style.borderColor = "red";
+        document.querySelector("input#password").style.borderColor = "red";
+        document.querySelector("#remarks").style.fontSize = "large";
+        document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
+      }
 
+})
+})
+ 
