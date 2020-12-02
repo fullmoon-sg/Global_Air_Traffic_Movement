@@ -120,7 +120,7 @@ div.col.form-control input{
   height: 350px;
   padding: 25px; 
   background-image: url("images/sq-aircraft.jpg");
-  color:Yellow;
+  color:rgba(250, 218, 38, 0.9);
   object-fit: contain;
 }
 
@@ -139,7 +139,7 @@ div.col.form-control input{
 input { 
   width: 90%;
   padding : 10px;
-  
+  text-align : center;
   border-radius: 4px;
   display: block;
   font-size: 16px; 
@@ -263,7 +263,7 @@ div.login{
   height: 255px;
   width: 100%;
   background-image: url("images/sq-aircraft.jpg");
-  color:Yellow;
+  color:rgba(250, 218, 38, 0.9);
 }
 
 form#form{
@@ -315,17 +315,22 @@ input#password{
   color : #fff;
   font-size: 14px;  
 } 
+
 div.message{
-padding:4px;
-font-size: 14px;
+font-size: 18px;
+text-align : center;
 }
 
 p#remarks{
   position: absolute;
-  left: 10px;
+  width:auto;
+  text-align: center;
+  left: 50vw;
   font-size : 14px;
-}
-/* Flight data layout setting */
+  margin:0;
+} */
+/*
+ Flight data layout setting */
 div#flight-data
 {
   height: 39vh;
@@ -464,7 +469,7 @@ div.col.form-control label{
     height: 415px;
     width: 100%;
     background-image: url("images/sq-aircraft.jpg");
-    color:Yellow;
+    color:rgba(250, 218, 38, 0.9);
   }
   
   form#form{
@@ -522,7 +527,7 @@ div.col.form-control label{
   }
   div.message{
     padding:5px;
-   font-size: 3em;
+   font-size: 20px;
   }
   
   p#remarks{
