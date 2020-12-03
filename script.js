@@ -128,7 +128,7 @@ subMit.addEventListener('click', function(){
             document.querySelector("#submit").style.backgroundColor = "red";
             document.querySelector("input#name").style.borderColor = "green";
             document.querySelector("input#password").style.borderColor = "red";
-            document.querySelector("#remarks").style.fontSize = "28px";
+            document.querySelector("#remarks").style.fontSize = "22px";
             document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
         }
         else if (((validation.index1.userid !== userId) && (validation.index1.password == passWord)) ||
@@ -137,7 +137,7 @@ subMit.addEventListener('click', function(){
             document.querySelector("#submit").style.backgroundColor = "red";
             document.querySelector("input#name").style.borderColor = "red";
             document.querySelector("input#password").style.borderColor = "green";
-            document.querySelector("#remarks").style.fontSize = "28px";
+            document.querySelector("#remarks").style.fontSize = "22px";
             document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
         }
         else
@@ -145,7 +145,7 @@ subMit.addEventListener('click', function(){
             document.querySelector("#submit").style.backgroundColor = "red";
             document.querySelector("input#name").style.borderColor = "red";
             document.querySelector("input#password").style.borderColor = "red";
-            document.querySelector("#remarks").style.fontSize = "28px";
+            document.querySelector("#remarks").style.fontSize = "22px";
             document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
         }
 
