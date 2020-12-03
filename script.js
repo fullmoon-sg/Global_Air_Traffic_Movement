@@ -40,7 +40,7 @@ async function addFlightMarkers(map)
         let fDirection = document.querySelector("#f-Dir");  
         
 //restricted to 20 aircraft to avoid overall the network during development phase
- for (let i = 0; i < 20; i++)
+for (let i = 0; i < 20; i++)
    {   
          let marker = L.marker([flight[i][6],flight[i][5]],{rotationAngle : 180,
          icon : L.icon({
@@ -62,7 +62,7 @@ async function addFlightMarkers(map)
         fDirection.value = (((flight[i][10]).toFixed(0)) + " Degree"); //Display current heading
    })
    }
-  }
+}
 
 addFlightMarkers(map);
 
@@ -108,47 +108,47 @@ let subMit = document.querySelector("#submit");
 let validation = {};
 
 subMit.addEventListener('click', function(){
-let userId = document.querySelector("#name").value;
-let passWord = document.querySelector("#password").value;
-let signIn = document.querySelector("#login")
-axios.get("admin/users.json").then(function(response)
-{    
-  validation = response.data;
-  
-    if (((validation.index1.userid === userId) && (validation.index1.password === passWord)) ||
-       ((validation.index2.userid === userId) && (validation.index2.password === passWord)))
-      {         
-        document.querySelector(".login-form").style.display = "none";
-        signIn.innerHTML = "Hello" + " " + userId;
-      
-      }
-       else if (((validation.index1.userid === userId) && (validation.index1.password !== passWord)) ||
-       ((validation.index2.userid === userId) && (validation.index2.password !== passWord)))
-       { 
-        document.querySelector("#submit").style.backgroundColor = "red";
-        document.querySelector("input#name").style.borderColor = "green";
-        document.querySelector("input#password").style.borderColor = "red";
-        document.querySelector("#remarks").style.fontSize = "large";
-        document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
-      }
-      else if (((validation.index1.userid !== userId) && (validation.index1.password == passWord)) ||
-      ((validation.index2.userid !== userId) && (validation.index2.password === passWord)))
-      {
-        document.querySelector("#submit").style.backgroundColor = "red";
-        document.querySelector("input#name").style.borderColor = "red";
-        document.querySelector("input#password").style.borderColor = "green";
-        document.querySelector("#remarks").style.fontSize = "large";
-        document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
-      }
-      else
-      {
-        document.querySelector("#submit").style.backgroundColor = "red";
-        document.querySelector("input#name").style.borderColor = "red";
-        document.querySelector("input#password").style.borderColor = "red";
-        document.querySelector("#remarks").style.fontSize = "large";
-        document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
-      }
+    let userId = document.querySelector("#name").value;
+    let passWord = document.querySelector("#password").value;
+    let signIn = document.querySelector("#login")
 
-})
+    axios.get("admin/users.json").then(function(response)
+    {    
+    validation = response.data;
+    
+        if (((validation.index1.userid === userId) && (validation.index1.password === passWord)) ||
+        ((validation.index2.userid === userId) && (validation.index2.password === passWord)))
+        {         
+            document.querySelector(".login-form").style.display = "none";
+            signIn.innerHTML = "Hello" + " " + userId;
+        }
+        else if (((validation.index1.userid === userId) && (validation.index1.password !== passWord)) ||
+        ((validation.index2.userid === userId) && (validation.index2.password !== passWord)))
+        { 
+            document.querySelector("#submit").style.backgroundColor = "red";
+            document.querySelector("input#name").style.borderColor = "green";
+            document.querySelector("input#password").style.borderColor = "red";
+            document.querySelector("#remarks").style.fontSize = "28px";
+            document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
+        }
+        else if (((validation.index1.userid !== userId) && (validation.index1.password == passWord)) ||
+        ((validation.index2.userid !== userId) && (validation.index2.password === passWord)))
+        {
+            document.querySelector("#submit").style.backgroundColor = "red";
+            document.querySelector("input#name").style.borderColor = "red";
+            document.querySelector("input#password").style.borderColor = "green";
+            document.querySelector("#remarks").style.fontSize = "28px";
+            document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
+        }
+        else
+        {
+            document.querySelector("#submit").style.backgroundColor = "red";
+            document.querySelector("input#name").style.borderColor = "red";
+            document.querySelector("input#password").style.borderColor = "red";
+            document.querySelector("#remarks").style.fontSize = "28px";
+            document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
+        }
+
+    })
 })
  

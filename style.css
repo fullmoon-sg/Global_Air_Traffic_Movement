@@ -146,16 +146,14 @@ input {
 } 
 
 .btn-submit{
-
- margin:10px;
- height: 5vh;
-  width: 90%;
+ margin:0px 10px 20px 15px;
+ height: 7vh;
+ width: 90%;
  align-content: center;
-
-  border-radius: 4px;
-  background-color: rgba(250, 218, 38, 0.9);
-  color : #fff;
-  font-size: 20px;
+ border-radius: 4px;
+ background-color: rgba(250, 218, 38, 0.9);
+ color : #fff !important;
+font-size: 28px;
   
 } 
 
@@ -380,24 +378,22 @@ div.col.form-control label{
 }
 }
 
-/* Small devices (portrait phones, less than 576px) */
-/* Tested with Google Chrome Development Tool for mobile devices of iPhone X */
 @media (min-width: 576px) and (max-width: 991.9px) {
 /* menu bar setting  */
 
 .navbar.navbar-light.bg-light{
   padding:0px;
   background-color : #171717 !important;
-  height: 6vh;
+  height: 8vh;
   width: 100%;
   }
 
 a#login{
-  font-size: 1em;
+  font-size: 20px;
 }
 
 a#airport{
-  font-size: 1em;
+  font-size: 20px;
 }
 
 .container-fluid{
@@ -417,13 +413,14 @@ a#airport{
 
 /* Map setting  */
 #map{
-  height: 55vh;
+  height: 68vh;
   width: 100%;
 }
 
 /* login form setting */
 div.login-form{
-  height:53vh;
+ 
+  height:68vh;
   width: 100%;
   position: absolute;
   background-color: rgba(0,0,0,0.5);
@@ -434,24 +431,23 @@ div.login-form{
 }
 
 div.login-content{
-  height:350px;
-  width:275px;
-  position: absolute; 
-  top : 20px;
+  height:550px;
+  width:375px;
   border-radius: 10px;
   overflow: hidden;
 }
 
 div.header{
-  height: 8vh;
+  height: 11vh;
   border-bottom: 5px solid rgb(214, 213, 213);
   background-color: rgba(250, 218, 38, 0.9);
 } 
 
 .login-content h2{  
-  padding: 5px;
-  font-size: 18px;
+
+  font-size: 26px;
   text-align : center;
+  margin: 20px 0px 20px 0px;
 }
 
 .close{
@@ -459,7 +455,7 @@ div.header{
   right: 8px;
   position: absolute;
   font-weight:bold;
-  font-size: 35px;
+  font-size: 55px;
   transform: rotate(45deg);
   cursor: pointer;
 }
@@ -468,7 +464,7 @@ div.login{
   position: relative;
   margin: 0;
   padding:0;
-  height: 255px;
+  height: 355px;
   width: 100%;
   background-image: url("images/sq-aircraft.jpg");
   color:rgba(250, 218, 38, 0.9);
@@ -480,6 +476,7 @@ form#form{
   position: absolute;
   top: 0;
   height: 30vh;
+  width:100%
 }
 
 div.login-control{
@@ -490,7 +487,7 @@ div.login-control{
 
 .login-control label{
 
-  font-size : 18px;
+  font-size : 24px;
 
 }
 
@@ -503,7 +500,7 @@ input#name {
   border: 2px solid;
   border-radius: 4px;
   display: block;
-  font-size: 16px; 
+  font-size: 24px; 
 } 
 
 input#password{
@@ -513,22 +510,212 @@ input#password{
   padding : 5px;
   border-radius: 4px;
   display: block;
-  font-size: 16px; 
+  font-size: 24px; 
 } 
 
-.btn-submit{
+a#sumbit.btn.btn-submit{
 margin : 10px;
  height: 5vh;
   position: absolute;
   top: 175px;
   font-size: 16px; 
-  left: 11px;
-  width:87% 
+  width:87%;
+  color:white !important;
 } 
 
 div.message{
     position:absolute;
-    top:300px;
+    top:470px;
+    border-top:10px solid silver;
+    width: 100%;
+    padding: 5px;
+
+}
+
+p#remarks{
+  width:auto;
+  text-align: center;
+ 
+  font-size : 24px;
+  margin:5px;
+} */
+/*
+ Flight data layout setting */
+div#flight-data
+{
+  width: 100%;
+  padding: 2px;
+  background-color : #171717;
+  color : white;
+}
+
+div#header{
+  margin : 2px 0px 1px 0px;
+  padding : 2px 2px 1px 5px;
+  height: 27vh;
+}
+
+#header h2{
+  font-size: 24px;
+  padding : 2px;
+  margin: 2px;
+}
+
+.form.row.form{
+
+ height: 20vh;
+ width: 100%;
+}
+
+div.col.form-control{
+  height: 8vh;
+  padding:0;
+  width: 40vw;
+  margin: 1px;
+}
+
+#header input{
+ height : 50%
+}
+
+div.col.form-control label{
+  margin-bottom : 5px;
+  height:   20px;
+  width : 140px; 
+ 
+}
+}
+
+/* Small devices (portrait phones, less than 576px) */
+/* Tested with Google Chrome Development Tool for mobile devices of iPhone X */
+@media (min-width: 992px) {
+/* menu bar setting  */
+
+.navbar.navbar-light.bg-light{
+  padding:0px;
+  background-color : #171717 !important;
+  height: 14vh;
+  width: 100%;
+  }
+
+a#login{
+  font-size: 28px;
+}
+
+a#airport{
+  font-size: 28px;
+}
+
+.container-fluid{
+  padding:1px;
+}
+
+#login {
+  padding : 15px;
+  font-size : 24px;
+}
+
+#airport{ 
+  left: 100px;
+  padding : 15px 50px 15px 15px;
+  font-size: 24px;
+}
+
+/* Map setting  */
+#map{
+  height: 72vh;
+  width: 100%;
+}
+
+/* login form setting */
+div.login-form{
+  height:72vh;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  display: none; /*-Form will not appear on starup.--------*/
+  z-index: 1000; /*----make this layer above the map------*/
+}
+
+div.login-content{
+  height:700px;
+  width:450px;
+  position: absolute; 
+  top : 50px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+div.header{
+  height: 13vh;
+  border-bottom: 5px solid rgb(214, 213, 213);
+  background-color: rgba(250, 218, 38, 0.9);
+} 
+
+.login-content h2{  
+  margin : 20px;
+  padding: 8px;
+  font-size: 36px;
+  text-align : center;
+}
+
+.close{
+  top:0;
+  right: 8px;
+  position: absolute;
+  font-weight:bold;
+  font-size: 50px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+div.login{
+  height: 470px;
+}
+
+form#form{
+  padding: 5px;
+  height: 350px;
+  width:375px;
+}
+
+div.login-control{
+ 
+  margin : 5px 10px 20px 10px;
+
+}
+
+.login-control label{
+  font-size : 28px;
+  padding: 5px;
+
+}
+
+input#name {  
+  width: 90%;
+  margin:5px;
+  padding : 5px;
+  border: 2px solid;
+  border-radius: 4px;
+  display: block;
+  font-size: 28px; 
+} 
+
+input#password{
+   
+  width: 90%;
+  
+  padding : 5px;
+  border-radius: 4px;
+  display: block;
+  font-size: 28px; 
+} 
+
+div.message{
+    position:absolute;
+    top:600px;
     border-top:10px solid silver;
     width: 100%;
     padding: 5px;
@@ -539,7 +726,7 @@ p#remarks{
   width:auto;
   text-align: center;
   left: 50vw;
-  font-size : 14px;
+  font-size : 24px;
   margin:0;
 } */
 /*
@@ -590,410 +777,3 @@ div.col.form-control label{
 
 /* Middle devices up to 1200px */
 /* Tested with Google Chrome Development Tool for mobile devices of iPad Pro */
-
- @media (min-width: 992px)and (max-width: 1199.9px){ 
-
-  .navbar.navbar-light.bg-light{
-    padding:0px;
-    background-color : #171717 !important;
-    height: 10vh;
-    width: 100%;
-    }
-  
-  a#login{
-    font-size: 2em;
-  }
-  
-  a#airport{
-    font-size: 2em;
-  }
-  
-  .container-fluid{
-    padding:1px;
-  }
-  
-  #login {
-    padding : 15px;
-    font-size : 24px;
-  }
-  
-  #airport{ 
-    left: 100px;
-    padding : 15px 50px 15px 15px;
-    font-size: 24px;
-  }
-  
-  /* Map setting  */
-  #map{
-    height: 65vh;
-    width: 100%;
-  }
-  
-  /* login form setting */
-  div.login-form{
-    height:65vh;
-    width: 100%;
-    position: absolute;
-    background-color: rgba(0,0,0,0.5);
-    justify-content: center;
-    align-items: center;
-    display: none; /*-Form will not appear on starup.--------*/
-    z-index: 1000; /*----make this layer above the map------*/
-  }
-  
-  div.login-content{
-    height:650px;
-    width:400px;
-    position: relative; 
-    border-radius: 15px;
-    overflow: hidden;
-  }
-  
-  div.header{
-    height: 10vh;
-    border-bottom: 5px solid rgb(214, 213, 213);
-    background-color: rgba(250, 218, 38, 0.9);
-  } 
-  
-  .login-content h2{  
-    position: absolute;
-    top: 2.5vh;
-    left: 2.5vh;
-    padding: 5px;
-    font-size: 32px;
-    text-align : center;
-  }
-  
-  .close{
-    top:0;
-    right: 8px;
-    position: absolute;
-    font-weight:bold;
-    font-size: 65px;
-    transform: rotate(45deg);
-    cursor: pointer;
-  }
-  
-  div.login{
-    position: relative;
-    margin: 0;
-    padding:0;
-    height: 415px;
-    width: 100%;
-    background-image: url("images/sq-aircraft.jpg");
-    color:rgba(250, 218, 38, 0.9);
-  }
-  
-  form#form{
-    padding: 5px;
-    position: relative;
-    top: 0;
-    height: 30vh;
-  }
-  
-  div.login-control{
-    margin:5px;
-    padding:5px;
-    width:100%;
-  }
-  
-  .login-control label{
-    margin:5px;
-    font-size : 26px;
-    padding: 2px;
-  }
-  
-  input#name { 
-    width: 90%;
-    margin:5px;
-    padding : 5px;
-    border: 2px solid;
-    border-radius: 4px;
-    display: block;
-    font-size: 24px; 
-  } 
-  
-  input#password{
-    width: 90%;
-    margin:5px;
-    padding : 5px;
-    border-radius: 4px;
-    display: block;
-    font-size: 28px; 
-  } 
-  
-  .btn-submit{
-   height: 5vh;
-    width: 90%;
-    align-content: center;
-    border-radius: 4px;
-    background-color: rgba(250, 218, 38, 0.9);
-    color : #fff;
-  } 
-  
-  button#submit.btn-submit{
-    font-size: 30px;
-    width:88%;
-    margin:20px;
-  }
-  div.message{
-    padding:5px;
-  }
-  
-  p#remarks{
-    position: absolute;
-    font-size: 24px;
-    padding : 10px;
-    width:50vw;
-  }
-  /* Flight data layout setting */
-  div#flight-data
-  {
-    height: 25vh;
-    width: 100%;
-    padding: 2px;
-    background-color : #171717;
-    color : white;
-  }
-  
-  div#header{
-    margin : 2px 0px 1px 0px;
-    padding : 2px 2px 1px 5px;
-    height: 38vh;
-  }
-  
-  #header h2{
-    font-size: 24px;
-    height: 3vh;
-    padding : 2px;
-    margin: 0;
-  }
-  
-  .form.row.form{
-  
-   height: 20vh;
-   width: 100%;
-   flex-direction: column;
-  }
-  
-  div.col.form-control{
-    height: 8vh;
-    width: 24vw;
-    margin: 1px;
-  }
-  
-  #header input{
-   height : 50%
-  }
-  
-  div.col.form-control label{ 
-    padding: 2px;
-    height:   30px;
-    width : 230px; 
-    font-size : 20px;
-  }
-  }
-
-@media (min-width: 1200px){ 
-
-  .navbar.navbar-light.bg-light{
-    padding:0px;
-    background-color : #171717 !important;
-    height: 10vh;
-    width: 100%;
-    }
-  
-  a#login{
-    font-size: 2em;
-  }
-  
-  a#airport{
-    font-size: 2em;
-  }
-  
-  .container-fluid{
-    padding:1px;
-  }
-  
-  #login {
-    padding : 15px;
-    font-size : 24px;
-  }
-  
-  #airport{ 
-    left: 100px;
-    padding : 15px 50px 15px 15px;
-    font-size: 24px;
-  }
-  
-  /* Map setting  */
-  #map{
-    height: 65vh;
-    width: 100%;
-  }
-  
-  /* login form setting */
-  div.login-form{
-    height:65vh;
-    width: 100%;
-    position: absolute;
-    background-color: rgba(0,0,0,0.5);
-    justify-content: center;
-    align-items: center;
-    display: none; /*-Form will not appear on starup.--------*/
-    z-index: 1000; /*----make this layer above the map------*/
-  }
-  
-  div.login-content{
-    height:650px;
-    width:400px;
-    position: relative; 
-    border-radius: 15px;
-    overflow: hidden;
-  }
-  
-  div.header{
-    height: 10vh;
-    border-bottom: 5px solid rgb(214, 213, 213);
-    background-color: rgba(250, 218, 38, 0.9);
-  } 
-  
-  .login-content h2{  
-    position: absolute;
-    top: 2.5vh;
-    left: 2.5vh;
-    padding: 5px;
-    font-size: 32px;
-    text-align : center;
-  }
-  
-  .close{
-    top:0;
-    right: 8px;
-    position: absolute;
-    font-weight:bold;
-    font-size: 65px;
-    transform: rotate(45deg);
-    cursor: pointer;
-  }
-  
-  div.login{
-    position: relative;
-    margin: 0;
-    padding:0;
-    height: 415px;
-    width: 100%;
-    background-image: url("images/sq-aircraft.jpg");
-    color:rgba(250, 218, 38, 0.9);
-  }
-  
-  form#form{
-    padding: 5px;
-    position: relative;
-    top: 0;
-    height: 30vh;
-  }
-  
-  div.login-control{
-    margin:5px;
-    padding:5px;
-    width:100%;
-  }
-  
-  .login-control label{
-    margin:5px;
-    font-size : 26px;
-    padding: 2px;
-  }
-  
-  input#name { 
-    width: 90%;
-    margin:5px;
-    padding : 5px;
-    border: 2px solid;
-    border-radius: 4px;
-    display: block;
-    font-size: 24px; 
-  } 
-  
-  input#password{
-    width: 90%;
-    margin:5px;
-    padding : 5px;
-    border-radius: 4px;
-    display: block;
-    font-size: 28px; 
-  } 
-  
-  .btn-submit{
-   height: 5vh;
-    width: 90%;
-    align-content: center;
-    border-radius: 4px;
-    background-color: rgba(250, 218, 38, 0.9);
-    color : #fff;
-  } 
-  
-  button#submit.btn-submit{
-    font-size: 30px;
-    width:88%;
-    margin:20px;
-  }
-  div.message{
-    padding:5px;
-  }
-  
-  p#remarks{
-    position: absolute;
-    font-size: 24px;
-    padding : 10px;
-    width:50vw;
-  }
-  /* Flight data layout setting */
-  div#flight-data
-  {
-    height: 25vh;
-    width: 100%;
-    padding: 2px;
-    background-color : #171717;
-    color : white;
-  }
-  
-  div#header{
-    margin : 2px 0px 1px 0px;
-    padding : 2px 2px 1px 5px;
-    height: 38vh;
-  }
-  
-  #header h2{
-    font-size: 24px;
-    height: 3vh;
-    padding : 2px;
-    margin: 0;
-  }
-  
-  .form.row.form{
-  
-   height: 20vh;
-   width: 100%;
-   flex-direction: column;
-  }
-  
-  div.col.form-control{
-    height: 8vh;
-    width: 24vw;
-    margin: 1px;
-  }
-  
-  #header input{
-   height : 50%
-  }
-  
-  div.col.form-control label{ 
-    padding: 2px;
-    height:   30px;
-    width : 230px; 
-    font-size : 20px;
-  }
-  }
-

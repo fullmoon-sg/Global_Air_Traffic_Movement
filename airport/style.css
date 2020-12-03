@@ -6,7 +6,7 @@
 
 #airport{
   width:70%;
-  height: 100vh;
+  height: 850px;
   right: 0;
   background-image : url("images/changi-airport.jpg");
   background-size: cover;
@@ -70,7 +70,6 @@
 }
 
 #prev{
-  padding : 30px;
   width: 30px;
   cursor: pointer;
 }
@@ -98,12 +97,12 @@
   }
   
   div.container{
-    width:100%;
-    height: 80vh;
+    width:375px;
+    height: 440px;
     background: rgba(85,85,85,0.9);
     position: absolute;
     left : 0;
-    top:25vh;
+    top:230px;
   }
 
   div.info{
@@ -116,99 +115,8 @@
   }
 
   h1#airport-title{
-    font-size : 1.3em;
-    padding: 10px 5px 5px 5px;
-    
-  }
-
-p#airport-info{
-    left:0;
-    color: #f0eef1;
-    font-size: 10px;
-    margin: 2px 0;
-    line-height: 10px;
-  }
-
- div.slider{
-    position: absolute;
-    left: 15vw;
-    width: 75vw;
-    height:5vh;
-    top : 70vh;
-  }
-
-  div#prev{
-    position: relative;
-    margin:0;
-    padding:0;
-     cursor: pointer;
-  }
-
-  div#middle{
-    position: relative;
-    margin:0;
-    padding:0;
-    cursor: pointer;
-  }
-
-  div#next{
-    position: relative;
-    margin:0;
-    padding:0;
-    cursor: pointer;
-  }
-  .bi.bi-backspace{
-    position: relative;
-     width: 2em;
-     cursor: pointer;
-  }
-
-   .bi.bi-house-door-fill{
-     position: relative;
-     left: 25vw;
-    width: 2em;
-      cursor: pointer;
-   }
-  
-   .bi.bi-backspace-reverse{
-    position: relative;
-    left: 50vw;
-     width: 2em;
-     cursor: pointer;
-   } 
-
-}
-@media (min-width: 575.9px)and (max-width:991.9px){
-  div#airport{
-    width: 150vw;
-    height: 25vh;
-    background-image : url("images/changi-airport.jpg");
-    background-size: cover;
-    background-position:  center;
-    transition: all 2s;
-  }
-  
-  div.container{
-    width:100%;
-    height: 80vh;
-    background: rgba(85,85,85,0.9);
-    position: absolute;
-    left : 0;
-    top:25vh;
-  }
-
-  div.info{
-    width: 350px;
-    color: #fff;
-    position: absolute;
-    left: 10px;
-    top: 43%;
-    transform: translateY(-50%);
-  }
-
-  h1#airport-title{
-    font-size : 1.3em;
-    padding: 10px 5px 5px 5px;
+    font-size : 16px;
+    padding: 5px 5px 5px 5px;
     
   }
 
@@ -217,7 +125,99 @@ p#airport-info{
     color: #f0eef1;
     font-size: 12px;
     margin: 2px 0;
-    line-height: 14px;
+    line-height: 12px;
+  }
+
+ div.slider{
+    position: absolute;
+    left: 15vw;
+    width: 75vw;
+    height:5vh;
+    top : 60vh;
+  }
+
+  div#prev{
+    position: relative;
+    margin:0;
+    padding:0;
+     cursor: pointer;
+  }
+
+  div#middle{
+    position: relative;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+  }
+
+  div#next{
+    position: relative;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+  }
+  .bi.bi-backspace{
+    position: relative;
+     width: 2em;
+     cursor: pointer;
+  }
+
+   .bi.bi-house-door-fill{
+     position: relative;
+     left: 25vw;
+    width: 2em;
+      cursor: pointer;
+   }
+  
+   .bi.bi-backspace-reverse{
+    position: relative;
+    left: 50vw;
+     width: 2em;
+     cursor: pointer;
+   } 
+
+}
+
+@media (min-width: 575.9px)and (max-width:991.9px){
+  div#airport{
+    width: 150vw;
+    height: 45vh;
+    background-image : url("images/changi-airport.jpg");
+    background-size: cover;
+    background-position:  center;
+    transition: all 2s;
+  }
+  
+  div.container{
+    width:100%;
+    height: 80vh;
+    background: rgba(85,85,85,0.9);
+    position: absolute;
+    left : 0;
+    top:25vh;
+  }
+
+  div.info{
+    width: 745px;
+    height:500px;
+    color: #fff;
+    position: absolute;
+    left: 10px;
+    top: 480px;
+    transform: translateY(-50%);
+  }
+
+  h1#airport-title{
+    font-size : 30px;
+    padding: 10px 5px 5px 5px;
+    
+  }
+
+p#airport-info{
+    color: #f0eef1;
+    font-size: 18px;
+    margin: 2px 5px 5px 10px;
+    line-height: 18px;
   }
 
  div.slider{
@@ -267,189 +267,90 @@ p#airport-info{
      width: 2em;
      cursor: pointer;
    } 
-
 }
 
-@media (min-width: 992px) and (max-width:1199.9) {
+@media (min-width: 992px){
   
-   div#airport{
-    width: 100%;
-    height: 50vh;
-    background-image : url("images/changi-airport.jpg");
-    background-size: cover;
-    background-position:  center;
-    transition: all 2s;
-  }
+#airport{
   
-  div.container{
-    width:100%;
-    height: 50vh;
-    background: rgba(85,85,85,0.9);
-    position: absolute;
-    left : 0;
-    top:50vh;
-  }
+  background-position: left;
+  position: absolute;
+  transition: all 2s;
+}
+.container{
+  height:850px;
+  width:435px;
+}
 
   div.info{
-    width: 660px;
-    height:500px;
+    height: 800px;
+    width: 400px;
     color: #fff;
     position: absolute;
-    left: 20px;
-    top: 250px;
+    left: 5px;
+    top: 50%;
     transform: translateY(-50%);
   }
 
   h1#airport-title{
-    font-size : 24px;
-    padding: 10px 5px 5px 5px;
-    
+    font-size : 28px;
+    position: absolute;
+    top: 10px;
+    padding: 15px 0px 5px 5px;
+    margin: 15px 2px 5px 5px;  
   }
 
 p#airport-info{
-    left:0;
+  position: absolute;
+  top:100px;
+  width:400px;
+  height:750px;
     color: #f0eef1;
-    font-size: 18px;
+    font-size: 16px;
+    margin: 5px;
+    padding : 10px;
     line-height: 18px;
   }
 
-
-
  div.slider{
     position: absolute;
-    left: 15vw;
-    width: 75vw;
-    height:5vh;
-    
+    left: 15px;
+    width: 400px;
+    height:50px;
+    bottom: 25px;
   }
 
   div#prev{
-    position: relative;
-    
-    padding:0;
-     cursor: pointer;
+    position: absolute;
   }
 
   div#middle{
-    cursor: pointer;
+    position: absolute;
   }
 
   div#next{
     position: relative;
-   
+    margin:0;
     padding:0;
-    cursor: pointer;
+   
   }
   .bi.bi-backspace{
     position: relative;
-     width: 2em;
+     width: 2.5em;
      cursor: pointer;
   }
 
    .bi.bi-house-door-fill{
      position: relative;
-     left: 25vw;
-    width: 2em;
+     left: 12vw;
+    width: 2.5em;
       cursor: pointer;
    }
   
    .bi.bi-backspace-reverse{
     position: relative;
-    left: 50vw;
-     width: 2em;
+    left: 25vw;
+     width: 2.5em;
      cursor: pointer;
    } 
-
-}
-
-@media (min-width: 1200px) {
-  
-   div#airport{
-    width: 100%;
-    height: 50vh;
-    background-image : url("images/changi-airport.jpg");
-    background-size: cover;
-    background-position:  center;
-    transition: all 2s;
-  }
-  
-  div.container{
-    width:100%;
-    height: 50vh;
-    background: rgba(85,85,85,0.9);
-    position: absolute;
-    left : 0;
-    top:50vh;
-  }
-
-  div.info{
-    width: 660px;
-    height:500px;
-    color: #fff;
-    position: absolute;
-    left: 20px;
-    top: 250px;
-    transform: translateY(-50%);
-  }
-
-  h1#airport-title{
-    font-size : 24px;
-    padding: 10px 5px 5px 5px;
-    
-  }
-
-p#airport-info{
-    left:0;
-    color: #f0eef1;
-    font-size: 18px;
-    line-height: 18px;
-  }
-
-
-
- div.slider{
-    position: absolute;
-    left: 15vw;
-    width: 75vw;
-    height:5vh;
-    
-  }
-
-  div#prev{
-    position: relative;
-    
-    padding:0;
-     cursor: pointer;
-  }
-
-  div#middle{
-    cursor: pointer;
-  }
-
-  div#next{
-    position: relative;
-   
-    padding:0;
-    cursor: pointer;
-  }
-  .bi.bi-backspace{
-    position: relative;
-     width: 2em;
-     cursor: pointer;
-  }
-
-   .bi.bi-house-door-fill{
-     position: relative;
-     left: 25vw;
-    width: 2em;
-      cursor: pointer;
-   }
-  
-   .bi.bi-backspace-reverse{
-    position: relative;
-    left: 50vw;
-     width: 2em;
-     cursor: pointer;
-   } 
-
 }
