@@ -13,8 +13,6 @@ computer console.
 
 A live demo of the website can be viewed on https://fullmoon-sg.github.io/Global_Air_Traffic_Movement/
 
-![Image of Devices](https://github.com/fullmoon-sg/Global_Air_Traffic_Movement/tree/main/wireframes/device_view.jpg)
-
 ## UX
 
 Travelling is fun, entertaining and stress relieving activity. As such, the application designed is based on simple and elegance. The opening page is partition
@@ -75,6 +73,67 @@ navigation is done through a “tree-branches” method. The menu will allows th
 of a map and display of aircraft icon that receiving the latitude and longitude from the external API JSON data file. In addition, a separate icon JSON file 
 was created to display 8 major airport around the world. At the bottom of the page, it will display all the available parameters reading from the external API 
 file. 
+
+![Image of Devices](https://github.com/fullmoon-sg/Global_Air_Traffic_Movement/tree/main/wireframes/device_view.jpg)
+
+## Site Map 
+
+* Home Page
+* Menu
+- Login In
+- Airport
+* Leaflet Map
+* Flight Data Menu
+- Flight Date
+- Last Updated Position
+- Flight Number 
+- Departure Airport 
+- Arrival Airport
+- Current Altitude
+- Current Speed
+
+* Log In 
+- Username input
+- Password input
+- Submit
+
+* Airport 
+- Airport Name
+- Airport Description
+- Airport Picture
+- Previous Button 
+- Link to Home Page
+- Next Button
+
+## Navigation Design
+
+### Home Page Navigation
+
+Upon loading into the home page, the user will see the website is partition into 3 section. On the top the menu is the menu bar with “Login” and “Airport” icon. 
+At the center of the webpage, it is will display a region of the world map and multiple aircraft icon layer over the map (Due to the aircraft information is 
+supported by 3rd party API, the loading of these aircraft may take up to 15 seconds). Bottom of the website is the flight data menu which displays up to 8 
+difference close to real-time information (5 static info [flight date, last updated position, flight number, departure airport, arrival airport, and 3 flight 
+parameters [current altitude, current speed and current direction]. When the aircraft icons appear on the map (the API offers by OpenSky organisation delivers 
+up to 500 aircraft icon per loading. However, to prevent network overloading during demo, the script restricted only 20 aircraft icons display simultaneously), 
+the user can click on the aircraft and see the information of the selected aircraft starts to propagate the information into the flight data field. At the 
+meantime, a popup from the aircraft will display the aircraft flight number. 
+
+### Login Page Navigation
+When the user selects the “Login” icon on the menu bar, a grey color background will pop-up and inhibit the map and the function of the selecting aircraft icon 
+will freeze. The user will then see another pop-up form that prompt the user to key-in their “username” and “password”(For demonstration purposes, I have created 
+two users’ account and store in it a JSON file. The account are (1) Username : Test1, password : 1234, (2) Username : Test2, password : 5678. ). The form will 
+validate and feedback to the users if he has entered the information correctly. Firstly, the system will check the user’s credential by verifying their username 
+and password. If it is key-in correctly, a green border will light up while a red border will light-up when it is wrong. Secondly, a message will surface at 
+the bottom of the form to prompt the user that an error has occurred. The login session will end when the users inserting their credential correctly or the 
+user can close the form by clicking on the cross located top right concern of the form. 
+
+### Airport Page Navigation
+When the user selects the “Airport” icon on the menu bar, it will hyperlinked to a new html page. At the airport page, the user will see the airport name and 
+description on the left panel while airport picture on the right panel (for tablet and mobile phone, the airport picture is on the top page while airport name
+and description below it). At the bottom of the airport name and description, the user will see at “Home” icon and “Next Arrow” icon. Upon selecting the 
+“Next Arrow” to go next page, another” Left Arrow” icon will appear. The user can then scroll back and forth of the airport page. For this project, I have 
+inserted 4 airport details into it but it could easily scaling up to as many pages as we want. When the user clicks the “home” icon, it will go back to the home 
+page.
 
 ## Testing
 
