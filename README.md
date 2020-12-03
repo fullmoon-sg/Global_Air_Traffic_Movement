@@ -80,30 +80,30 @@ file.
 
 * Home Page
 * Menu
-- Login In
-- Airport
+  - Login In
+  - Airport
 * Leaflet Map
 * Flight Data Menu
-- Flight Date
-- Last Updated Position
-- Flight Number 
-- Departure Airport 
-- Arrival Airport
-- Current Altitude
-- Current Speed
+  - Flight Date
+  - Last Updated Position
+  - Flight Number 
+  - Departure Airport 
+  - Arrival Airport
+  - Current Altitude
+  - Current Speed
 
 * Log In 
-- Username input
-- Password input
-- Submit
+  - Username input
+  - Password input
+  - Submit
 
 * Airport 
-- Airport Name
-- Airport Description
-- Airport Picture
-- Previous Button 
-- Link to Home Page
-- Next Button
+  - Airport Name
+  - Airport Description
+  - Airport Picture
+  - Previous Button 
+  - Link to Home Page
+  - Next Button
 
 ## Navigation Design
 
