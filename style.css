@@ -5,6 +5,7 @@
   font-family: 'Roboto Slab',sans-serif;
 }
 
+
 .navbar{
   padding:0px;
   background-color : #171717 !important;
@@ -49,7 +50,6 @@
 
 #flight-data
 {
-  height: 15vh; 
   padding: 5px;
   background-color : #171717;
   color : rgb(7, 250, 7);
@@ -227,22 +227,23 @@ div.login-form{
 }
 
 div.login-content{
-  height:400px;
+  height:350px;
   width:275px;
-  position: relative; 
+  position: absolute; 
+  top : 20px;
   border-radius: 10px;
   overflow: hidden;
 }
 
 div.header{
-  height: 10vh;
+  height: 8vh;
   border-bottom: 5px solid rgb(214, 213, 213);
   background-color: rgba(250, 218, 38, 0.9);
 } 
 
 .login-content h2{  
   padding: 5px;
-  font-size: 20px;
+  font-size: 18px;
   text-align : center;
 }
 
@@ -267,26 +268,28 @@ div.login{
 }
 
 form#form{
-  margin: 2px;
+ 
   padding: 5px;
-  position: relative;
+  position: absolute;
   top: 0;
   height: 30vh;
 }
 
 div.login-control{
-  margin:2px;
-  padding:2px;
-  width:100%;
+ 
+  margin : 5px 10px 20px 10px;
+
 }
 
 .login-control label{
-  margin:5px;
+
   font-size : 18px;
-  padding: 2px;
+
 }
 
 input#name { 
+    position : absolute;
+    top : 3vh;
   width: 90%;
   margin:5px;
   padding : 5px;
@@ -297,6 +300,7 @@ input#name {
 } 
 
 input#password{
+   
   width: 90%;
   margin:5px;
   padding : 5px;
@@ -306,23 +310,25 @@ input#password{
 } 
 
 .btn-submit{
-
+margin : 10px;
  height: 5vh;
-  width: 90%;
- align-content: center;
-  border-radius: 4px;
-  background-color: rgba(250, 218, 38, 0.9);
-  color : #fff;
-  font-size: 14px;  
+  position: absolute;
+  top: 175px;
+  font-size: 16px; 
+  left: 11px;
+  width:87% 
 } 
 
 div.message{
-font-size: 18px;
-text-align : center;
+    position:absolute;
+    top:300px;
+    border-top:10px solid silver;
+    width: 100%;
+    padding: 5px;
+
 }
 
 p#remarks{
-  position: absolute;
   width:auto;
   text-align: center;
   left: 50vw;
@@ -333,7 +339,6 @@ p#remarks{
  Flight data layout setting */
 div#flight-data
 {
-  height: 39vh;
   width: 100%;
   padding: 2px;
   background-color : #171717;
