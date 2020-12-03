@@ -678,15 +678,11 @@ form#form{
 }
 
 div.login-control{
- 
   margin : 5px 5px 5px 15px;
-
 }
 
 .login-control label{
-  font-size : 22px;
-  
-
+  font-size : 22px; 
 }
 
 input#name {  
@@ -699,10 +695,8 @@ input#name {
   font-size: 28px; 
 } 
 
-input#password{
-   
+input#password{ 
   width: 90%;
-  
   padding : 5px;
   border-radius: 4px;
   display: block;

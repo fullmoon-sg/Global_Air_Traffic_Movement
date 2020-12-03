@@ -12,6 +12,7 @@ computer console.
 ## Demo 
 
 A live demo of the website can be viewed on https://fullmoon-sg.github.io/Global_Air_Traffic_Movement/
+(https://github.com/fullmoon-sg/Global_Air_Traffic_Movement/tree/main/wireframes/device_view.jpg)
 
 ## UX
 
