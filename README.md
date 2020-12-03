@@ -78,7 +78,7 @@ file.
 
 ## Site Map 
 
-![Image of Devices]
+![Image of Devices](https://github.com/fullmoon-sg/Global_Air_Traffic_Movement/tree/main/wireframes/sitemap.jpg)
 
 * Home Page
 * Menu
