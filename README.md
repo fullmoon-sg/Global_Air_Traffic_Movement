@@ -67,7 +67,7 @@ etc in the near future. A home page link is available for the user to go back ho
 
 ## Structure
 
-The application designed is based on simple and elegance. The intention is not to cluster the users with too many details or selection. As such, the application 
+The application is designed based on simple and elegance theme. The intention is not to cluster the users with too many details or selection. As such, the application 
 is split into 3 partition sections, the top panel section for menu, center select for the map and flight data menu for the bottom. For the menu panel, the 
 navigation is done through a “tree-branches” method. The menu will allows the user to “login in” and “view airport information”. On the map, it will consist 
 of a map and display of aircraft icon that receiving the latitude and longitude from the external API JSON data file. In addition, a separate icon JSON file 
