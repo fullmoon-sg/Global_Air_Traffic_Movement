@@ -78,11 +78,14 @@ file.
 
 ## Site Map 
 
+![Image of Devices]
+
 * Home Page
 * Menu
   - Login In
   - Airport
 * Leaflet Map
+  - Aircraft Icon
 * Flight Data Menu
   - Flight Date
   - Last Updated Position
