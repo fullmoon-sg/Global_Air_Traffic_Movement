@@ -6,9 +6,8 @@
 
 #airport{
   position: absolute;
-  right: 0;
   height: 100%;
-  width:72%;
+  width:65%;
   background-image : url("images/changi-airport.jpg");
   background-size: cover;
   background-position: left;
@@ -17,8 +16,8 @@
 
 .container{
   position: absolute;
-  left : 0;
   top:0;
+  left : 0;
   height: 100%;
   width:35%;
   background: rgba(85,85,85,0.9);
@@ -88,10 +87,11 @@
 }
 
 @media (min-width:299px)and (max-width:575.9px){
-  
+
+
 div#airport{
-  height: 35vh;
-  width: 150vw;
+  height: 300px;
+  width: 450px;
   background-image : url("images/changi-airport.jpg");
   background-size: cover;
   background-position:  center;
@@ -100,16 +100,16 @@ div#airport{
   
 div.container{
   position: absolute;
-  top:230px;
+  top:275px;
   left : 0;
-  height: 440px;
-  width:375px;
+  height: 525px;
+  width:440px;
   background: rgba(85,85,85,0.9);
 }
 
 div.info{
   position: absolute;
-  top: 43%;
+  top: 45%;
   left: 10px;
   width: 350px; 
   color: #fff;
@@ -125,16 +125,16 @@ p#airport-info{
   left:0;
   margin: 2px 0;
   color: #f0eef1;
-  font-size: 12px;
-  line-height: 12px;
+  font-size: 13px;
+  line-height: 13px;
 }
 
 div.slider{
   position: absolute;
-  top : 60vh;
-  left: 15vw;
-  height:5vh;
-  width: 75vw;
+  top : 425px;
+  left: 10px;
+  height: 75px;
+  width: 330px;
 }
 
 div#prev{
@@ -145,14 +145,16 @@ div#prev{
 }
 
 div#middle{
-  position: relative;
+  position: absolute;
+  left:55px;
   margin:0;
   padding:0; 
   cursor: pointer;
 }
 
 div#next{
-  position: relative;
+  position: absolute;
+  right:0;
   margin:0;
   padding:0;
   cursor: pointer;
@@ -160,21 +162,21 @@ div#next{
 
 .bi.bi-backspace{
   position: relative;
-  width: 2em;
+  width: 3em;
   cursor: pointer;
 }
 
 .bi.bi-house-door-fill{
   position: relative;
   left: 25vw;
-  width: 2em;
+  width: 3em;
   cursor: pointer;
 }
   
 .bi.bi-backspace-reverse{
   position: relative;
   left: 50vw;
-  width: 2em;
+  width: 3em;
   cursor: pointer;
 } 
 }
@@ -223,10 +225,10 @@ p#airport-info{
 
  div.slider{
   position: absolute;
-  top : 70vh;
-  left: 15vw;
-  height:5vh;
-  width: 75vw;  
+  top : 700px;
+  left: 30px;
+  height:50px;
+  width: 700px;  
 }
 
 div#prev{
@@ -238,6 +240,7 @@ div#prev{
 
 div#middle{
   position: relative;
+  left:300px;
   margin:0;
   padding:0;
   cursor: pointer;
@@ -245,43 +248,28 @@ div#middle{
 
 div#next{
   position: relative;
+  left: 600px;
   margin:0;
   padding:0;
   cursor: pointer;
 }
-
-.bi.bi-backspace{
-  position: relative;
-  width: 2em;
-  cursor: pointer;
-}
-
-.bi.bi-house-door-fill{
-  position: relative;
-  left: 25vw;
-  width: 2em;
-  cursor: pointer;
-}
-  
-.bi.bi-backspace-reverse{
-  position: relative;
-  left: 50vw;
-  width: 2em;
-  cursor: pointer;
+ 
 } 
-}
 
 @media (min-width: 992px){
   
 #airport{
   position: absolute;
+  right:0;
+  height:800px;
+  width:1045px;
   background-position: left;
   transition: all 2s;
 }
 
-.container{
-  height:100%;
-  width:540px;
+div.container{
+height: 800px;
+width: 400px;
 }
 
 div.info{
@@ -289,14 +277,14 @@ div.info{
   top: 50%;
   left: 5px;
   height: 800px;
-  width: 400px;
+  width: 385px;
   color: #fff;
   transform: translateY(-50%);
 }
 
 h1#airport-title{
   position: absolute;
-  top: 10px;
+  top: 20px;
   padding: 15px 0px 5px 5px;
   margin: 15px 2px 5px 5px;  
   font-size : 28px;
@@ -304,10 +292,9 @@ h1#airport-title{
 
 p#airport-info{ 
   position: absolute;
-  top:100px;
-  height:750px;
-  width:400px;
-  margin: 5px;
+  top:140px;
+  height:550px;
+  width:375px;
   padding : 10px;
   color: #f0eef1;
   font-size: 16px;
@@ -319,7 +306,7 @@ div.slider{
   left: 15px;
   bottom: 25px;
   height:50px;
-  width: 400px;
+  width: 350px;
 }
 
 div#prev{
@@ -328,31 +315,14 @@ div#prev{
 
 div#middle{
   position: absolute;
+  right:120px;
 }
 
 div#next{
-  position: relative;
+  position: absolute;
+  right: 0px;
   margin:0;
   padding:0;
 }
 
-.bi.bi-backspace{
-  position: relative;
-  width: 2.5em;
-  cursor: pointer;
-}
-
-.bi.bi-house-door-fill{
-  position: relative;
-  left: 12vw;
-  width: 2.5em;
-  cursor: pointer;
-}
-  
-.bi.bi-backspace-reverse{
-  position: relative;
-  left: 25vw;
-  width: 2.5em;
-  cursor: pointer;
-} 
 }
