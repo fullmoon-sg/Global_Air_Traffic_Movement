@@ -44,8 +44,8 @@ of designing the user interface. They can be viewed via this link https://github
 * To provide users with close to real-time air movement around the world.
 
   - Automatic depend surveillance-broadcast (ADS-B) is a surveillance technology in which an aircraft determines its position via satellite navigation and 
-periodically broadcasts, enabling it to be tracked. Due to the long time-lapse, between ADS-B to host server and then broadcast to this application, the 
-presentation of the selected aircraft position can only be estimated location with up to 15second delay; subject to the host server traffic loading.
+   periodically broadcasts, enabling it to be tracked. Due to the long time-lapse, between ADS-B to host server and then broadcast to this application, the 
+   presentation of the selected aircraft position can only be estimated location with up to 15second delay; subject to the host server traffic loading.
 
 * To allow the users to monitor the selected aircraft parameters, these include aircraft flight number, destination, arrival aerodrome and location.
 
@@ -112,13 +112,13 @@ file.
 
 ### Home Page Navigation
 
-Upon loading into the home page, the user will see the website is partition into 3 section. On the top the menu is the menu bar with “Login” and “Airport” icon. 
-At the center of the webpage, it is will display a region of the world map and multiple aircraft icon layer over the map (Due to the aircraft information is 
+Upon loading into the home page, the user will view the website in 3 difference sections. On the top the website is the menu bar with “Login” and “Airport” icon. 
+At the center of the webpage, it is will display a region of the world map with multiple aircraft icon layer over the map (Due to the aircraft information is 
 supported by 3rd party API, the loading of these aircraft may take up to 15 seconds). Bottom of the website is the flight data menu which displays up to 8 
 difference close to real-time information (5 static info [flight date, last updated position, flight number, departure airport, arrival airport, and 3 flight 
 parameters [current altitude, current speed and current direction]. When the aircraft icons appear on the map (the API offers by OpenSky organisation delivers 
-up to 500 aircraft icon per loading. However, to prevent network overloading during demo, the script restricted only 20 aircraft icons display simultaneously), 
-the user can click on the aircraft and see the information of the selected aircraft starts to propagate the information into the flight data field. At the 
+up to 500 aircraft icon per loading. However, in order to prevent network from overloading during demo, the script restricted only 20 aircraft icons to display simultaneously), 
+the user can click on the aircraft and see the flight information of the selected aircraft starts to propagate it into the flight data field. At the 
 meantime, a popup from the aircraft will display the aircraft flight number. 
 
 ### Login Page Navigation
@@ -129,21 +129,21 @@ two users’ account and store in it a JSON file. The account are (1) Username :
 validate and feedback to the users if he has entered the information correctly. Firstly, the system will check the user’s credential by verifying their username 
 and password. If it is key-in correctly, a green border will light up while a red border will light-up when it is wrong. Secondly, a message will surface at 
 the bottom of the form to prompt the user that an error has occurred. The login session will end when the users inserting their credential correctly or the 
-user can close the form by clicking on the cross located top right concern of the form. 
+user can choose to close the form by clicking on the cross located top right concern of the form. 
 
 ### Airport Page Navigation
 
 When the user selects the “Airport” icon on the menu bar, it will hyperlinked to a new html page. At the airport page, the user will see the airport name and 
 description on the left panel while airport picture on the right panel (for tablet and mobile phone, the airport picture is on the top page while airport name
 and description below it). At the bottom of the airport name and description, the user will see at “Home” icon and “Next Arrow” icon. Upon selecting the 
-“Next Arrow” to go next page, another” Left Arrow” icon will appear. The user can then scroll back and forth of the airport page. For this project, I have 
+“Next Arrow” to go next page, the ” Left Arrow” icon will appear. The user can then scroll back and forth of the airport page. For this project, I have 
 inserted 4 airport details into it but it could easily scaling up to as many pages as we want. When the user clicks the “home” icon, it will go back to the home 
 page.
 
 ## Testing
 
-This website was tested using both Ms Edge and Google Chrome development tools for mobile phone (iphone X model) and tablet (ipad Pro) emulators. Using the CSS
- media query, adjustments will made to make the website suitable for desktop, tablet and mobile phone uses. 
+This website was tested using both Ms Edge and Google Chrome development tools for mobile phone (iphone 6/7/8 model), tablet (ipad) and laptop emulators. Using the CSS
+ media query, adjustments were made to make the website suitable for desktop, tablet and mobile phone uses. 
 
 ## Acknowledgement
 
@@ -151,7 +151,7 @@ I would like to acknowledge the following institution, API provider and websites
 
 ### Domain Knowledge
 
-- Trent Global College Singapore lectures and admin staff
+- Trent Global College Singapore lectures and admin staff 
 
 ### API external 
         
