@@ -49,7 +49,7 @@ presentation of the selected aircraft position can only be estimated location wi
 
 * To allow the users to monitor the selected aircraft parameters, these include aircraft flight number, destination, arrival aerodrome and location.
 
- - The application will leverage on the JSON data received from the host server. Using the JSON like latitude and longitude, aircraft speed, aircraft heading 
+  - The application will leverage on the JSON data received from the host server. Using the JSON like latitude and longitude, aircraft speed, aircraft heading 
 and etc, these data can be pulled and display it on the HTML. For this project, the intention to provide up to 8 data pointers for the users to consume. The 
 data details are “Flight Date”, “Last Updated Position”, “Flight Number”, “Departure Airport ”, “Arrival Airport,” “Current Altitude”, “Current Speed” and 
 "Current Direction”.
