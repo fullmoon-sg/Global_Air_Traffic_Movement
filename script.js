@@ -2,12 +2,12 @@
 let map = L.map('map').setView([0,0], 3);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
-    minZoom: 4,
-    maxZoom: 10,
-    id: 'mapbox/streets-v11',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw' //demo access token
+        minZoom: 4,
+        maxZoom: 10,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw' //demo access token
 }).addTo(map);
 
 //To display 10 icons to indicate airport location in the map
@@ -15,7 +15,7 @@ axios.get("admin/airport_location.json").then(function(response){
   airportLoc= response.data;
  for (let i=0; i < airportLoc.length; i++)
  {
-  L.marker([airportLoc[i]["lat"],airportLoc[i]["long"]]).addTo(map).bindPopup(airportLoc[i]["airport"]); 
+        L.marker([airportLoc[i]["lat"],airportLoc[i]["long"]]).addTo(map).bindPopup(airportLoc[i]["airport"]); 
  }
 })
 
@@ -68,28 +68,28 @@ addFlightMarkers(map);
 
 function currentTimeOverPosition(x){
   // The unix time stamp is a way to track time as a running total of seconds. This count starts at the Unix Epoch on January 1st, 1970 at UTC. Therefore, the unix time stamp is merely the number of seconds between a particular date and the Unix Epoch.
-  let unix_timestamp = x;
-  // Create a new JavaScript Date object based on the timestamp
-  // multiplied by 1000 so that the argument is in milliseconds, not seconds.
-  var date = new Date(unix_timestamp * 1000);
-  // Hours part from the timestamp
-  var hours = date.getHours();
-  // Minutes part from the timestamp
-  var minutes = "0" + date.getMinutes();
-  // Seconds part from the timestamp
-  var seconds = "0" + date.getSeconds();     
-  // Will display time in 10:30:23 format
-  return formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+        let unix_timestamp = x;
+        // Create a new JavaScript Date object based on the timestamp
+        // multiplied by 1000 so that the argument is in milliseconds, not seconds.
+        var date = new Date(unix_timestamp * 1000);
+        // Hours part from the timestamp
+        var hours = date.getHours();
+        // Minutes part from the timestamp
+        var minutes = "0" + date.getMinutes();
+        // Seconds part from the timestamp
+        var seconds = "0" + date.getSeconds();     
+        // Will display time in 10:30:23 format
+        return formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
 }
 
 function departureDate(x){
-  //Similar function to get currentTimeOverPosition
-  var a = new Date(x * 1000);
-  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  var year = a.getFullYear();
-  var month = months[a.getMonth()];
-  var date = a.getDate();
-  return time = date + ' ' + month + ' ' + year ;
+        //Similar function to get currentTimeOverPosition
+        var a = new Date(x * 1000);
+        var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        var year = a.getFullYear();
+        var month = months[a.getMonth()];
+        var date = a.getDate();
+        return time = date + ' ' + month + ' ' + year ;
 }
 //---------------- Login query-------------
 //Display login menu
@@ -108,47 +108,47 @@ let subMit = document.querySelector("#submit");
 let validation = {};
 
 subMit.addEventListener('click', function(){
-    let userId = document.querySelector("#name").value;
-    let passWord = document.querySelector("#password").value;
-    let signIn = document.querySelector("#login")
+        let userId = document.querySelector("#name").value;
+        let passWord = document.querySelector("#password").value;
+        let signIn = document.querySelector("#login")
 
-    axios.get("admin/users.json").then(function(response)
-    {    
-    validation = response.data;
-    
-        if (((validation.index1.userid === userId) && (validation.index1.password === passWord)) ||
-        ((validation.index2.userid === userId) && (validation.index2.password === passWord)))
-        {         
-            document.querySelector(".login-form").style.display = "none";
-            signIn.innerHTML = "Hello" + " " + userId;
-        }
-        else if (((validation.index1.userid === userId) && (validation.index1.password !== passWord)) ||
-        ((validation.index2.userid === userId) && (validation.index2.password !== passWord)))
-        { 
-            document.querySelector("#submit").style.backgroundColor = "red";
-            document.querySelector("input#name").style.borderColor = "green";
-            document.querySelector("input#password").style.borderColor = "red";
-            document.querySelector("#remarks").style.fontSize = "22px";
-            document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
-        }
-        else if (((validation.index1.userid !== userId) && (validation.index1.password == passWord)) ||
-        ((validation.index2.userid !== userId) && (validation.index2.password === passWord)))
-        {
-            document.querySelector("#submit").style.backgroundColor = "red";
-            document.querySelector("input#name").style.borderColor = "red";
-            document.querySelector("input#password").style.borderColor = "green";
-            document.querySelector("#remarks").style.fontSize = "22px";
-            document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
-        }
-        else
-        {
-            document.querySelector("#submit").style.backgroundColor = "red";
-            document.querySelector("input#name").style.borderColor = "red";
-            document.querySelector("input#password").style.borderColor = "red";
-            document.querySelector("#remarks").style.fontSize = "22px";
-            document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
-        }
+        axios.get("admin/users.json").then(function(response)
+        {    
+        validation = response.data;
+        
+            if (((validation.index1.userid === userId) && (validation.index1.password === passWord)) ||
+            ((validation.index2.userid === userId) && (validation.index2.password === passWord)))
+            {         
+                document.querySelector(".login-form").style.display = "none";
+                signIn.innerHTML = "Hello" + " " + userId;
+            }
+            else if (((validation.index1.userid === userId) && (validation.index1.password !== passWord)) ||
+            ((validation.index2.userid === userId) && (validation.index2.password !== passWord)))
+            { 
+                document.querySelector("#submit").style.backgroundColor = "red";
+                document.querySelector("input#name").style.borderColor = "green";
+                document.querySelector("input#password").style.borderColor = "red";
+                document.querySelector("#remarks").style.fontSize = "22px";
+                document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
+            }
+            else if (((validation.index1.userid !== userId) && (validation.index1.password == passWord)) ||
+            ((validation.index2.userid !== userId) && (validation.index2.password === passWord)))
+            {
+                document.querySelector("#submit").style.backgroundColor = "red";
+                document.querySelector("input#name").style.borderColor = "red";
+                document.querySelector("input#password").style.borderColor = "green";
+                document.querySelector("#remarks").style.fontSize = "22px";
+                document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
+            }
+            else
+            {
+                document.querySelector("#submit").style.backgroundColor = "red";
+                document.querySelector("input#name").style.borderColor = "red";
+                document.querySelector("input#password").style.borderColor = "red";
+                document.querySelector("#remarks").style.fontSize = "22px";
+                document.querySelector("#remarks").innerHTML = "Unable to Check-In.Try again.";
+            }
 
-    })
+        })
 })
  
