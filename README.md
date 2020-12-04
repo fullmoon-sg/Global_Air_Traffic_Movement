@@ -74,7 +74,7 @@ of a map and display of aircraft icon that receiving the latitude and longitude 
 was created to display 8 major airport around the world. At the bottom of the page, it will display all the available parameters reading from the external API 
 file. 
 
-<img src="/wireframes/device_view.jpg">
+<img src="/wireframes/devices_view.jpg">
 
 ## Site Map 
 
@@ -164,14 +164,14 @@ I would like to acknowledge the following institution, API provider and websites
 ### Websites format and photo
 
 - Bootstrap for HTML and CSS layout. https://getbootstrap.com/ 
-- The mainly miles for providing the A380 picture. https://mainlymiles.com/
-        
+- The mainly miles for providing the A380 picture. https://mainlymiles.com/        
 - The following website for proving airport photo :
     - https://travel.gaijinpot.com/
     - https://www.smccvb.com/
     - https://aais.org.sg/
     - https://www.timeout.com/
-
+    
+- Aircraft icon http://www.clker.com/
 - Google fonts for the html https://fonts.google.com/specimen/Roboto+Slab
 
        ***********   ** For Educational purposes**  ****************
