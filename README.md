@@ -37,7 +37,7 @@ focus is primarily on “sky and cloud” and “Light Gold” theme. The choice
 ## Wireframes 
 
 I have used MS PowerPoint as a tool to draft to the visual design of the website. Through the process of drafting, it helps me to have a better consistent ways 
-of designing the user interface. They can be viewed via this link https://github.com/fullmoon-sg/Global_Air_Traffic_Movement/tree/main/Wireframes.
+of designing the user interface. They can be viewed via this link https://github.com/fullmoon-sg/Global_Air_Traffic_Movement/tree/main/Wireframes/Wireframe.pdf
 
 ## Scope
 
@@ -122,6 +122,7 @@ the user can click on the aircraft and see the information of the selected aircr
 meantime, a popup from the aircraft will display the aircraft flight number. 
 
 ### Login Page Navigation
+
 When the user selects the “Login” icon on the menu bar, a grey color background will pop-up and inhibit the map and the function of the selecting aircraft icon 
 will freeze. The user will then see another pop-up form that prompt the user to key-in their “username” and “password”(For demonstration purposes, I have created 
 two users’ account and store in it a JSON file. The account are (1) Username : Test1, password : 1234, (2) Username : Test2, password : 5678. ). The form will 
@@ -131,6 +132,7 @@ the bottom of the form to prompt the user that an error has occurred. The login 
 user can close the form by clicking on the cross located top right concern of the form. 
 
 ### Airport Page Navigation
+
 When the user selects the “Airport” icon on the menu bar, it will hyperlinked to a new html page. At the airport page, the user will see the airport name and 
 description on the left panel while airport picture on the right panel (for tablet and mobile phone, the airport picture is on the top page while airport name
 and description below it). At the bottom of the airport name and description, the user will see at “Home” icon and “Next Arrow” icon. Upon selecting the 
