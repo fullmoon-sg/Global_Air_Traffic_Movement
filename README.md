@@ -74,11 +74,11 @@ of a map and display of aircraft icon that receiving the latitude and longitude 
 was created to display 8 major airport around the world. At the bottom of the page, it will display all the available parameters reading from the external API 
 file. 
 
-![Image of Devices](https://github.com/fullmoon-sg/Global_Air_Traffic_Movement/tree/main/wireframes/device_view.jpg)
+<img src="/wireframes/device_view.jpg">
 
 ## Site Map 
 
-![Image of Devices]
+<img src="/wireframes/sitemap.jpg">
 
 * Home Page
 * Menu
@@ -142,3 +142,34 @@ page.
 
 This website was tested using both Ms Edge and Google Chrome development tools for mobile phone (iphone X model) and tablet (ipad Pro) emulators. Using the CSS
  media query, adjustments will made to make the website suitable for desktop, tablet and mobile phone uses. 
+
+## Acknowledgement
+
+I would like to acknowledge the following institution, API provider and websites for their contribution for making my first personal website project as a success.
+
+### Domain Knowledge
+
+- Trent Global College Singapore lectures and admin staff
+
+### API external 
+        
+- The OpenSky network https://opensky-network.org/
+        
+### Map external
+        
+- Leaflet map for providing the map https://leafletjs.com/
+        
+### Websites format and photo
+
+- Bootstrap for HTML and CSS layout. https://getbootstrap.com/ 
+- The mainly miles for providing the A380 picture. https://mainlymiles.com/
+        
+- The following website for proving airport photo :
+        https://travel.gaijinpot.com/
+        https://www.smccvb.com/
+        https://aais.org.sg/
+        https://www.timeout.com/
+
+- Google fonts for the html https://fonts.google.com/specimen/Roboto+Slab
+
+************* For Educational purposes******************
