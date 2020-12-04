@@ -37,7 +37,7 @@ focus is primarily on “sky and cloud” and “Light Gold” theme. The choice
 ## Wireframes 
 
 I have used MS PowerPoint as a tool to draft to the visual design of the website. Through the process of drafting, it helps me to have a better consistent ways 
-of designing the user interface. They can be viewed via this link https://github.com/fullmoon-sg/Global_Air_Traffic_Movement/tree/main/Wireframes/Wireframe.pdf
+of designing the user interface. They can be viewed via this link https://github.com/fullmoon-sg/Global_Air_Traffic_Movement/blob/main/wireframes/Wireframe.pdf
 
 ## Scope
 
