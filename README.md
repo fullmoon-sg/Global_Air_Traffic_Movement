@@ -43,25 +43,25 @@ of designing the user interface. They can be viewed via this link https://github
 
 * To provide users with close to real-time air movement around the world.
 
-- Automatic depend surveillance-broadcast (ADS-B) is a surveillance technology in which an aircraft determines its position via satellite navigation and 
+  - Automatic depend surveillance-broadcast (ADS-B) is a surveillance technology in which an aircraft determines its position via satellite navigation and 
 periodically broadcasts, enabling it to be tracked. Due to the long time-lapse, between ADS-B to host server and then broadcast to this application, the 
 presentation of the selected aircraft position can only be estimated location with up to 15second delay; subject to the host server traffic loading.
 
 * To allow the users to monitor the selected aircraft parameters, these include aircraft flight number, destination, arrival aerodrome and location.
 
-- The application will leverage on the JSON data received from the host server. Using the JSON like latitude and longitude, aircraft speed, aircraft heading 
+ - The application will leverage on the JSON data received from the host server. Using the JSON like latitude and longitude, aircraft speed, aircraft heading 
 and etc, these data can be pulled and display it on the HTML. For this project, the intention to provide up to 8 data pointers for the users to consume. The 
 data details are “Flight Date”, “Last Updated Position”, “Flight Number”, “Departure Airport ”, “Arrival Airport,” “Current Altitude”, “Current Speed” and 
 "Current Direction”.
 
 * To provide users with the capability to scroll for a particular traffic flying over a particular region
 
-- Within the JSON data file, the information on current latitude and longitudes, and current aircraft heading information, can be extracted and displayed it on 
+  - Within the JSON data file, the information on current latitude and longitudes, and current aircraft heading information, can be extracted and displayed it on 
 the map. This feature allow the user to quickly zoom into a particular and select any aircraft to retrieve their details. 
 
 * To provide information on major cities airports around the world 
 
-- A menu bar will be available for the user to select the airport HTML page. Upon clicking, the menu will link to an airport HTML. The user can scroll up to 4 
+  - A menu bar will be available for the user to select the airport HTML page. Upon clicking, the menu will link to an airport HTML. The user can scroll up to 4 
 difference airports with text and pictures. This website can be scalable to include more airport information like airport amenities, servicing available and 
 etc in the near future. A home page link is available for the user to go back home page.  
 
