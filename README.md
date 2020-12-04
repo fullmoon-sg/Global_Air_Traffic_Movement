@@ -165,10 +165,10 @@ I would like to acknowledge the following institution, API provider and websites
 - The mainly miles for providing the A380 picture. https://mainlymiles.com/
         
 - The following website for proving airport photo :
-        https://travel.gaijinpot.com/
-        https://www.smccvb.com/
-        https://aais.org.sg/
-        https://www.timeout.com/
+    https://travel.gaijinpot.com/
+    https://www.smccvb.com/
+    https://aais.org.sg/
+    https://www.timeout.com/
 
 - Google fonts for the html https://fonts.google.com/specimen/Roboto+Slab
 
