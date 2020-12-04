@@ -54,7 +54,7 @@ next.addEventListener('click', function(){
         prev.style.display = "block";
         i++;
   }
-  if( i=== 3)
+  if( i===3)
   {
         next.style.display = "none";
   }
