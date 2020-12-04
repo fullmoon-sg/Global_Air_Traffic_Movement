@@ -74,11 +74,11 @@ of a map and display of aircraft icon that receiving the latitude and longitude 
 was created to display 8 major airport around the world. At the bottom of the page, it will display all the available parameters reading from the external API 
 file. 
 
-<img src="https://github.com/fullmoon-sg/Global_Air_Traffic_Movement/tree/main/wireframes/device_view.jpg">
+<img src="/wireframes/device_view.jpg">
 
 ## Site Map 
 
-<img src="https://github.com/fullmoon-sg/Global_Air_Traffic_Movement/tree/main/wireframes/sitemap.jpg">
+<img src="/wireframes/sitemap.jpg">
 
 * Home Page
 * Menu
