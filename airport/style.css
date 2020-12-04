@@ -256,7 +256,7 @@ div#next{
  
 } 
 
-@media (min-width: 992px){
+@media (min-width: 992px) and (max-width:1199.9px){
   
 #airport{
   position: absolute;
@@ -321,6 +321,70 @@ div#middle{
 div#next{
   position: absolute;
   right: 0px;
+  margin:0;
+  padding:0;
+}
+
+}
+
+@media (min-width: 1200px){
+  
+#airport{
+  position: absolute;
+  right:0;
+  background-position: left;
+  transition: all 2s;
+}
+
+div.info{
+  position: absolute;  
+  top: 500px;
+  left: 5px;
+  height: 1000px;
+  width: 675px;
+  color: #fff;
+  transform: translateY(-50%);
+}
+
+h1#airport-title{
+  position: absolute;
+  top: 50px;
+  padding: 15px 0px 5px 5px;
+  margin: 15px 2px 5px 5px;  
+  font-size : 40px;
+}
+
+p#airport-info{ 
+  position: absolute;
+  top: 180px;
+  height: 800px;
+  width: 650px;
+  padding: 10px;
+  color: #f0eef1;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+div.slider{
+  position: absolute;
+  left: 15px;
+  bottom: 25px;
+  height:50px;
+  width: 650px;
+}
+
+div#prev{
+  position: absolute;
+}
+
+div#middle{
+  position: absolute;
+  right:280px;
+}
+
+div#next{
+  position: absolute;
+  right: 20px;
   margin:0;
   padding:0;
 }
